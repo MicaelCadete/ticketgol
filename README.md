@@ -11,3 +11,4 @@ Area logada: (Meus pedidos, informações de cadastro)
 
 ![Home](/Prototipos/Home.PNG)
 ![MER](/Prototipos/MER.png)
+![Cadastro](/Prototipos/Cadastro.PNG)
