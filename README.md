@@ -1,9 +1,9 @@
 Funcionalidades do site:
 
-Dashoard principal (Principais eventos, painel rotativo e cards(botão de ingressos para informações do evento))
+Home Page: Dashoard principal (Principais eventos, painel rotativo e cards(botão de ingressos para informações do evento))
 
-Página do evento (Informações, seleção de ingressos, localização)
+Página do evento: (Informações, seleção de ingressos, localização)
 
-Area logada (Meus pedidos, informações de cadastro)
+Login: Tela para criar cadastros e fazer login
 
-Area de reserva ingresso
+Area logada: (Meus pedidos, informações de cadastro)
