@@ -9,4 +9,5 @@ Login: Tela para criar cadastros e fazer login
 Area logada: (Meus pedidos, informações de cadastro)
 
 
-![Home](Prototipos/Home.PNG)
+![Home](/Prototipos/Home.PNG)
+![MER](/Prototipos/MER.png)
