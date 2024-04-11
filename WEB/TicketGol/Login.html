@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
 <head>
+  <!-- Meta tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="icon" type="image/x-icon" href="Eventos/img/img-icone3.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título da página e ícone -->
   <title>TicketGol</title>
+  <link rel="icon" type="image/x-icon" href="Eventos/img/img-icone2.png" />
+  
+  <!-- Estilos CSS -->
   <link rel="stylesheet" href="Login/css/Login.css">
+  
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
+  
+  <!-- Ícones Uicons -->
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 <body>
-  <img class="imagem" src="Login/img/allianz.jpg">
+  <!-- Imagem de fundo -->
+  <img class="imagem" src="Login/img/img-fundoLogin.jpg">
+  
+  <!-- Container principal -->
   <div class="container">
+    <!-- Logo -->
     <img class="logo" src="Login/img/ticket.png">
+    
+    <!-- Botões de formulário -->
     <div class="buttonsForm">
       <div class="btnColor"></div>
       <button id="btnSignin">Sign in</button>
       <button id="btnSignup">Sign up</button>
     </div>
+    
+    <!-- Formulário de login -->
     <form id="signin">
       <input type="text" placeholder="Email" required />
       <i class="fas fa-envelope iEmail"></i>
@@ -30,6 +47,8 @@
       </div>
       <button type="submit">Sign in</button>
     </form>
+    
+    <!-- Formulário de cadastro -->
     <form id="signup">
       <input type="text" placeholder="Nome" required />
       <i class="fas fa-envelope iEmail"></i>
@@ -44,6 +63,8 @@
       <button type="submit">Sign up</button>
     </form>
   </div>
+  
+  <!-- Scripts -->
   <script src="Login/js/Login.js"></script>
 </body>
 </html>

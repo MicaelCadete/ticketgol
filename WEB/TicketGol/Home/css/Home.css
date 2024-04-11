@@ -1,93 +1,134 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
-
+/* Definição de estilos para todos os elementos */
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
 }
 
-body {
-  font-family: "arial";
-  background-color: whitesmoke;
-}
-
-.header-inner-content {
-  max-width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.navbar {
-  background-color: #b5121b;
-  padding: 0.5 rem 1rem;
-  height: 60px;
-  position: sticky;
-  top: 0;
-  box-shadow: 10px 0px 10px #c2222a;
-  z-index: 99;
-}
-
-.navbar>div {
+/* Estilos para o cabeçalho */
+header {
+  width: 104.16%;
+  /* Expandir além da largura da tela para evitar quebra de linha */
+  margin-left: -80px;
+  /* Ajuste para centralizar o cabeçalho */
+  margin-top: -11%;
+  /* Ajuste para posição */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 0;
+  position: absolute;
+  background-color: #b5121b;
+  /* Cor de fundo */
 }
 
+/* Estilos para o corpo da página */
+body {
+  background-color: whitesmoke;
+  /* Cor de fundo */
+  color: white;
+  /* Cor do texto */
+}
+
+/* Estilos para o logotipo */
 .logo {
-  font-size: 1.5rem;
-  color: white;
-}
-
-.logo span {
-  color: white;
-}
-
-.logo1 {
-  width: 70px;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
-}
-
-nav {
-  margin-right: 1.2rem;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: center;
-}
-
-nav ul li {
-  margin-right: 5rem;
+  width: 205px;
   cursor: pointer;
+  margin-left: 200%;
 }
 
-nav ul li a {
+.logo:hover {
+  transform: scale(0.93);
+  /* Efeito de escala no hover */
+  transition: all 0.5s;
+  /* Duração da transição */
+}
+
+/* Estilos para o título do menu */
+.titulo-menu {
+  margin-left: 2px;
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.titulo-menu:hover {
+  transform: scale(1.05);
+  /* Efeito de escala no hover */
+  transition: all 0.5s;
+  /* Duração da transição */
+}
+
+/* Estilos para a lista de links no cabeçalho */
+header ul {
+  list-style: none;
+  width: 100%;
+  text-align: right;
+  padding-right: 1%;
+}
+
+header ul li {
+  display: inline-block;
+  margin: 10px 35px;
+}
+
+header ul li a {
+  font-size: 19px;
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+header ul li:hover {
+  transform: scale(0.93);
+  /* Efeito de escala no hover */
+  transition: all 0.5s;
+  /* Duração da transição */
+}
+
+/* Estilos para o botão */
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  border: 10;
+  /* Correção: Era necessário definir o valor da borda */
+  border-color: white;
+  outline: 0;
+  border-radius: 7px;
+  background: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 550;
+  cursor: pointer;
+  margin-right: 15%;
+}
+
+.btn:hover {
+  transform: scale(0.93);
+  /* Efeito de escala no hover */
+  transition: 0.6s;
+}
+
+.btn a {
   text-decoration: none;
   color: white;
-  font-size: 1rem;
 }
 
-nav ul li:hover {
-  transform: translateY(-5px);
-  transition: all 0.2s;
-  font-weight: bold;
+.btn a:hover {
+  transform: none;
 }
 
-#login-btn img {
-  width: 30px;
-  height: auto;
-  cursor: pointer;
+.btn img {
+  width: 20px;
+  margin-right: 11px;
 }
 
+/* Estilos para o slider */
 .slider {
   margin: 50px auto 0;
+  margin-top: 11%;
   width: 800px;
   height: 400px;
   overflow: hidden;
@@ -191,11 +232,13 @@ nav ul li:hover {
   background-color: white;
 }
 
+/* Estilos para o rodapé */
 footer {
   position: fixed;
   bottom: 0;
 }
 
+/* Estilos para diferentes tamanhos de tela */
 @media(max-height:800px) {
   footer {
     position: static;
@@ -204,11 +247,6 @@ footer {
   header {
     padding-top: 40px;
   }
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
 }
 
 @media (max-height:800px) {
@@ -221,6 +259,7 @@ footer {
   }
 }
 
+/* Estilos para o rodapé distribuído */
 .footer-distributed {
   background-color: black;
   box-sizing: border-box;
@@ -238,7 +277,7 @@ footer {
   vertical-align: top;
 }
 
-/* Footer left */
+/* Estilos para a seção esquerda do rodapé */
 .footer-distributed .footer-left {
   width: 30%;
 }
@@ -250,10 +289,11 @@ footer {
 }
 
 .footer-distributed h3 span {
+  margin-left: 1.5px;
   color: #b5121b;
 }
 
-/* Footer links */
+/* Estilos para os links do rodapé */
 .footer-distributed .footer-links {
   color: white;
   margin: 20px 0 12px;
@@ -273,7 +313,7 @@ footer {
   margin: 0;
 }
 
-/* Footer Center */
+/* Estilos para a seção central do rodapé */
 .footer-distributed .footer-center {
   width: 35%;
 }
@@ -289,6 +329,11 @@ footer {
   line-height: 42px;
   margin: 10px 15px;
   vertical-align: middle;
+}
+
+.footer-distributed .footer-center i:hover {
+  box-shadow: 0 0 10px white;
+  transition: 0.3s;
 }
 
 .footer-distributed .footer-center i.fa-envelope {
@@ -313,10 +358,9 @@ footer {
 .footer-distributed .footer-center p a {
   color: white;
   text-decoration: none;
-  ;
 }
 
-/* Footer Right */
+/* Estilos para a seção direita do rodapé */
 .footer-distributed .footer-right {
   width: 30%;
 }
@@ -357,13 +401,15 @@ footer {
 }
 
 .footer-distributed .footer-icons a:hover {
-  background-color: white;
+  box-shadow: 0 0 10px white;
+  transition: 0.3s;
 }
 
 .footer-links a:hover {
   color: white;
 }
 
+/* Estilos responsivos para tamanhos menores de tela */
 @media (max-width: 880px) {
 
   .footer-distributed .footer-left,

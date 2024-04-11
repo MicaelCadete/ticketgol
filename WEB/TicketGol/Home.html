@@ -2,68 +2,83 @@
 <html lang="PT-BR">
 
 <head>
-  <meta charset="UTF-8" />
+  <!-- Definição do conjunto de caracteres e da compatibilidade do navegador -->
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="icon" type="image/x-icon" href="Eventos/img/img-icone3.png" />
+
+  <!-- Título da página e ícone -->
   <title>TicketGol</title>
-  <link rel="stylesheet" href="Home/css/Home.css" />
-  <script src="Home/js/Home.js" defer></script>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="Eventos/img/img-icone2.png" />
+
+  <!-- Meta tags para responsividade -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="Home/css/Home.css" />
+
+  <!-- Fontes externas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <div class="navbar">
-    <div class="header-inner-content">
-      <div class="logo-container">
-        <img src="home/img/ticket_logoBranco2.png" class="logo1" />
-        <h1 class="logo">Ticket<span>Gol</span></h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="Home.html">Início</a></li>
-          <li><a href="Eventos.html">Eventos</a></li>
-          <li><a href="Informacoes.html">Informações</a></li>
-          <a href="Login.html" id="login-btn"><img src="home/img/icon_login.png" alt="Login" /></a>
-        </ul>
-      </nav>
-    </div>
-  </div>
+  <!-- Cabeçalho -->
+  <header>
+    <a href="Home.html">
+      <img src="Eventos/img/img-logo3.png" class="logo">
+  </a>
+    <ul>
+      <!-- Links de navegação -->
+      <li><a href="Home.html">Início</a></li>
+      <li><a href="Eventos.html">Eventos</a></li>
+      <li><a href="Informacoes.html">Informações</a></li>
+    </ul>
 
+    <!-- Botão de login -->
+    <button class="btn">
+      <a href="Login.html" class="btn">
+        <img src="Eventos/img/img-entrar.png" alt="Entrar">Login
+    </a>
+    </button>
+
+  </header>
+
+  <!-- Slider -->
   <div class="slider">
     <div class="slides">
-      <!--Radio Buttons-->
+      <!-- Botões de rádio para navegação -->
       <input type="radio" name="radio-btn" id="radio1" />
       <input type="radio" name="radio-btn" id="radio2" />
       <input type="radio" name="radio-btn" id="radio3" />
       <input type="radio" name="radio-btn" id="radio4" />
-      <!--FIM Radio Buttons-->
 
-      <!--Slide image-->
+      <!-- Imagens dos slides -->
       <div class="slide first">
-        <img src="home/img/X.png" alt="Imagem1" />
+        <img src="home/img/X3.png" alt="Imagem1" />
       </div>
       <div class="slide">
-        <img src="home/img/X.png" alt="Imagem2" />
+        <img src="home/img/XX3.png" alt="Imagem2" />
       </div>
       <div class="slide">
-        <img src="home/img/X.png" alt="Imagem3" />
+        <img src="home/img/X1.png" alt="Imagem3" />
       </div>
       <div class="slide">
-        <img src="home/img/X.png" alt="Imagem4" />
+        <img src="home/img/XX1.png" alt="Imagem4" />
       </div>
-      <!--FIM Slide image-->
 
-      <!--Navigation auto-->
+      <!-- Navegação automática -->
       <div class="navigation-auto">
         <div class="auto-btn1"></div>
         <div class="auto-btn2"></div>
         <div class="auto-btn3"></div>
         <div class="auto-btn4"></div>
       </div>
-      <!--FIM Navigation auto-->
     </div>
 
+    <!-- Navegação manual -->
     <div class="manual-navigation">
       <label for="radio1" class="manual-btn"></label>
       <label for="radio2" class="manual-btn"></label>
@@ -72,9 +87,11 @@
     </div>
   </div>
 
+  <!-- Rodapé -->
   <footer class="footer-distributed">
     <div class="footer-left">
       <h3>Ticket<span>Gol</span></h3>
+      <!-- Links de navegação -->
       <p class="footer-links">
         <a href="Home.html">Início</a>
         |
@@ -82,16 +99,18 @@
         |
         <a href="Informacoes.html">Informações</a>
       </p>
+      <!-- Direitos autorais -->
       <p class="footer-company-name">Copyright © 2021 <strong>TicketGol</strong> All rights reserved</p>
     </div>
     <div class="footer-center">
+      <!-- Informações de contato -->
       <div>
         <i class="fa fa-map-marker"></i>
         <p><span>São Paulo, SP</span></p>
       </div>
       <div>
         <i class="fa fa-phone"></i>
-        <p>+55 (11) 933548219</p>
+        <p>+55 (11)93354-8219</p>
       </div>
       <div>
         <i class="fa fa-envelope"></i>
@@ -99,9 +118,11 @@
       </div>
     </div>
     <div class="footer-right">
+      <!-- Sobre nós e ícones sociais -->
       <p class="footer-company-about">
         <span>Sobre Nós</span>
-        <strong>TicketGol - </strong>Somos a sua porta de entrada para a emoção e a paixão dos grandes jogos. Na nossa plataforma, você encontrará uma ampla seleção de ingressos para os jogos mais emocionantes do momento. 
+        <strong>TicketGol - </strong>Somos a sua porta de entrada para a emoção e a paixão dos grandes jogos. Na nossa
+        plataforma, você encontrará uma ampla seleção de ingressos para os jogos mais emocionantes do momento.
       </p>
       <div class="footer-icons">
         <a href="#"><i class="fa fa-facebook"></i></a>

@@ -1,3 +1,4 @@
+/* Definições gerais */
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +6,11 @@
   font-family: monospace;
 }
 
+/* Estilos para o cabeçalho */
 header {
-  width: 104.2%;
+  width: 104.16%;
   margin-left: -80px;
-  margin-top: -13%;
+  margin-top: -11%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,30 +19,25 @@ header {
   background-color: #b5121b;
 }
 
+/* Estilos para o corpo da página */
 body {
   background-color: whitesmoke;
   color: white;
 }
 
-.img-fundo {
-  width: 100%;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  filter: grayscale(0.3) brightness(0.3);
-}
-
+/* Estilos para a logo */
 .logo {
-  width: 100px;
+  width: 205px;
   cursor: pointer;
-  margin-left: 15%;
+  margin-left: 200%;
 }
 
 .logo:hover {
-  transform: scale(1.05);
+  transform: scale(0.93);
   transition: all 0.5s;
 }
 
+/* Estilos para o título do menu */
 .titulo-menu {
   margin-left: 2px;
   font-size: 25px;
@@ -53,6 +50,7 @@ body {
   transition: all 0.5s;
 }
 
+/* Estilos para a lista de links no cabeçalho */
 header ul {
   list-style: none;
   width: 100%;
@@ -77,10 +75,11 @@ header ul li:hover {
   transition: all 0.5s;
 }
 
+/* Estilos para o botão */
 .btn {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 5px 8px;
   border: 10;
   border-color: white;
   outline: 0;
@@ -98,13 +97,23 @@ header ul li:hover {
   transition: 0.6s;
 }
 
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn a:hover {
+  transform: none;
+}
+
 .btn img {
   width: 20px;
   margin-right: 11px;
 }
 
+/* Estilos para os cards */
 .card-pt1 {
-  margin-top: 13%;
+  margin-top: 11%;
   display: flex;
   gap: 3.5%;
   place-items: center;
@@ -236,4 +245,179 @@ header ul li:hover {
 .card:hover .content p {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Estilos para o rodapé */
+footer {
+  bottom: 0;
+}
+
+@media(max-height:800px) {
+  footer {
+    position: static;
+  }
+
+  header {
+    padding-top: 40px;
+  }
+}
+
+/* Estilos para o rodapé */
+.footer-distributed {
+  background-color: black;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Estilos para o rodapé - à esquerda */
+.footer-distributed .footer-left {
+  width: 30%;
+}
+
+.footer-distributed h3 {
+  color: white;
+  font: normal 36px arial;
+  margin: 0;
+}
+
+.footer-distributed h3 span {
+  margin-left: 1.5px;
+  color: #b5121b;
+}
+
+/* Estilos para os links no rodapé */
+.footer-distributed .footer-links {
+  color: white;
+  margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Estilos para o rodapé - ao centro */
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: white;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilos para o rodapé - à direita */
+.footer-distributed .footer-right {
+  width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+  background-color: white;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* Media query para telas menores */
+@media (max-width: 880px) {
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
 }
