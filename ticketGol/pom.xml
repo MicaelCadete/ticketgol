@@ -6,7 +6,7 @@
   <artifactId>TicketGol</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>carstore Maven Webapp</name>
+  <name>TicketGol Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
   <dependencies>
@@ -41,7 +41,7 @@
 
   <build>
 
-    <finalName>carstore</finalName>
+    <finalName>TicketGol</finalName>
 
     <plugins>
       <plugin>

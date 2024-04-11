@@ -24,11 +24,11 @@ public class ClienteDAO {
 
             preparedStatement.execute();
 
-            System.out.println("Sucesso ao gravar o nome do carro no banco!");
+            System.out.println("Sucesso ao gravar cliente no banco!");
 
         } catch (Exception e) {
 
-            System.out.println("Erro ao gravar o nome do carro no banco!");
+            System.out.println("Erro ao gravar cliente no banco!");
 
         }
 
