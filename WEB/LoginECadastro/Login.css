@@ -13,10 +13,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   background-color: whitesmoke;
-}
+ }
 
-.container {
+ .container {
   background-color: whitesmoke;
   padding: 6px;
   width: 450px;
@@ -26,9 +27,8 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 20px 0 darkgrey;
-}
+  box-shadow: 0px 0px 10px 0px red;
+ }
 
 form {
   position: absolute;
@@ -41,7 +41,7 @@ form {
 }
 
 .buttonsForm {
-  margin-top: 45px;
+  margin-top: 30px;
   position: relative;
   border-radius: 30px;
   box-shadow: 0 0 7px 0 #B5121B;
@@ -66,7 +66,7 @@ form {
 
 input[type="text"], input[type="password"] {
   border: none;
-  margin-top: 40px;
+  margin-top: 30px;
   border-radius: 60px;
   padding: 8px 0 8px 35px;
   outline: none;
@@ -82,7 +82,7 @@ button[type="submit"] {
   outline: none;
   padding: 8px 0 8px 15px;
   font-size: 15px;
-  margin-top: 40px;
+  margin-top: 10px;
   cursor: pointer;
 }
 
@@ -93,7 +93,7 @@ button[type="submit"] {
 }
 
 #signin {
-  left: 25px;
+  left: 1000px;
 }
 
 #signup {
@@ -107,15 +107,19 @@ i {
 }
 
 .iEmail {
-  top: 40px;
+  top: 30px;
 }
 
 .iPassword {
-  top: 114px;
+  top: 95px;
 }
 
 .iPassword2 {
-  top: 190px;
+  top: 160px;
+}   
+
+.iCalendar {
+  top: 224px;
 }      
 
 .logo{
@@ -126,4 +130,6 @@ i {
 .imagem{
     width: 800px;
     height: 600px;
+    box-shadow: 0px 0px 10px 0px red;
+   
 }
