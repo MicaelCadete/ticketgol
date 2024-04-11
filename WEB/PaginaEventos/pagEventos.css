@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #3c3c3c;
+    display: grid;
+    place-items: center;
+    color: white;
+}
+
+.card-p {
+    margin-top: 200px;
+    display: flex;
+    gap: 25px;
+}
+
+.card {
+    width: 280px;
+    height: 380px;
+    aspect-ratio: 1 / 0.7;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card .image-box {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.card .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 90%;
+    border-radius: inherit;
+    transition: 0.5s ease-in-out;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.card:hover img {
+    filter: grayscale(0.3) brightness(0.5);
+}
+
+.card:hover::after {
+    opacity: 100;
+    inset: 20px;
+}
+
+.content {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content h2, .content p, .content img, .content h1, .content .img2{
+    opacity: 0;
+    transition: 0.4s 0.2s ease;
+}
+
+.content img {
+    width: 100px;
+    margin-right: 85px;
+}
+
+.content h1 {
+    font-size: 15px;
+    margin-top: -40px;
+}
+
+.content .img2 {
+    width: 100px;
+    margin-left: 105px;
+    margin-top: -35px;
+}
+
+.content .img3 {
+    width: 80px;
+    margin-left: 115px;
+    margin-top: -35px;
+}
+
+.content h2 {
+    margin-bottom: 12px;
+    scale: 0.7;
+    font-size: 17px;
+    margin-top: 30px;
+}
+
+.content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #d1d1d1;
+    transform: translateY(50%);
+}
+
+.card:hover .content img {
+    scale: 1.2;
+    opacity: 3;
+    filter: none;
+}
+
+.card:hover .content h1 {
+    scale: 1.2;
+    opacity: 3;
+}
+
+.card:hover .content h2 {
+    scale: 1;
+    opacity: 1;
+}
+
+.card:hover .content p {
+    opacity: 1;
+    transform: translateY(0);
+}
