@@ -311,7 +311,7 @@ footer {
 }
 
 .footer-distributed .footer-center p a {
-  color: #b5121b;
+  color: white;
   text-decoration: none;
   ;
 }
@@ -349,7 +349,7 @@ footer {
   background-color: #33383b;
   border-radius: 2px;
   font-size: 20px;
-  color: #ffffff;
+  color: white;
   text-align: center;
   line-height: 35px;
   margin-right: 3px;
