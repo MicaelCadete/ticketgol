@@ -118,7 +118,6 @@ header ul li:hover {
   gap: 3.5%;
   place-items: center;
   justify-content: center;
-  filter: grayscale(0.2) brightness(0.7);
 }
 
 .card-pt2 {
@@ -151,6 +150,7 @@ header ul li:hover {
   object-position: 50% 90%;
   border-radius: inherit;
   transition: 0.5s ease-in-out;
+  filter: grayscale(0.2) brightness(0.5);
 }
 
 .card::after {
@@ -164,7 +164,7 @@ header ul li:hover {
 }
 
 .card:hover img {
-  filter: grayscale(0.3) brightness(0.5);
+  filter: grayscale(0.2) brightness(0.25);
 }
 
 .card:hover::after {
@@ -175,7 +175,7 @@ header ul li:hover {
 .content {
   width: 80%;
   position: absolute;
-  top: 50%;
+  top: 51%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -226,25 +226,50 @@ header ul li:hover {
   transform: translateY(50%);
 }
 
-.card:hover .content img {
+.card .content img {
   scale: 1.2;
   opacity: 3;
   filter: none;
 }
 
-.card:hover .content h1 {
+.card .content h1 {
   scale: 1.2;
   opacity: 3;
 }
 
-.card:hover .content h2 {
+.card .content h2 {
   scale: 1;
   opacity: 1;
 }
 
-.card:hover .content p {
+.card .content p {
   opacity: 1;
   transform: translateY(0);
+}
+
+.btn-comprar {
+  padding: 6px 5px;
+  border: 10;
+  border-color: white;
+  outline: 0;
+  border-radius: 7px;
+  background: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+.btn-comprar a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-comprar img {
+  width: 15px;
+  margin-right: 11px;
+  margin-bottom: -3px;
 }
 
 /* Estilos para o rodapé */
@@ -334,6 +359,11 @@ footer {
   vertical-align: middle;
 }
 
+.footer-distributed .footer-center i:hover {
+  box-shadow: 0 0 10px white;
+  transition: 0.3s;
+}
+
 .footer-distributed .footer-center i.fa-envelope {
   font-size: 17px;
   line-height: 38px;
@@ -399,7 +429,8 @@ footer {
 }
 
 .footer-distributed .footer-icons a:hover {
-  background-color: white;
+  box-shadow: 0 0 10px white;
+  transition: 0.3s;
 }
 
 .footer-links a:hover {
