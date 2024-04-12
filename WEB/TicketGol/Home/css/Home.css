@@ -6,6 +6,10 @@
   font-family: monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Estilos para o cabeçalho */
 header {
   width: 104.16%;
@@ -25,17 +29,18 @@ header {
 
 /* Estilos para o corpo da página */
 body {
-  background-color: whitesmoke;
-  /* Cor de fundo */
   color: white;
   /* Cor do texto */
+  background: url(/teste/img/img-fundoTeste6.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Estilos para o logotipo */
 .logo {
   width: 205px;
   cursor: pointer;
-  margin-left: 200%;
+  margin-left: 100%;
 }
 
 .logo:hover {
@@ -65,7 +70,7 @@ header ul {
   list-style: none;
   width: 100%;
   text-align: right;
-  padding-right: 1%;
+  margin-right: 26%;
 }
 
 header ul li {
@@ -92,22 +97,20 @@ header ul li:hover {
   display: flex;
   align-items: center;
   padding: 5px 8px;
-  border: 10;
-  /* Correção: Era necessário definir o valor da borda */
   border-color: white;
   outline: 0;
-  border-radius: 7px;
+  border-radius: 15px;
   background: none;
   color: white;
   font-size: 18px;
   font-weight: 550;
   cursor: pointer;
-  margin-right: 15%;
+  margin-right: 5%;
 }
 
 .btn:hover {
-  transform: scale(0.93);
   /* Efeito de escala no hover */
+  transform: scale(0.93);
   transition: 0.6s;
 }
 
@@ -248,16 +251,6 @@ footer {
   }
 }
 
-@media (max-height:800px) {
-  footer {
-    position: static;
-  }
-
-  header {
-    padding-top: 40px;
-  }
-}
-
 /* Estilos para o rodapé distribuído */
 .footer-distributed {
   background-color: black;
@@ -266,7 +259,7 @@ footer {
   text-align: left;
   font: bold 16px sans-serif;
   padding: 50px 50px 60px 50px;
-  margin-top: 80px;
+  margin-top: 113px;
 }
 
 .footer-distributed .footer-left,
@@ -380,32 +373,64 @@ footer {
   margin-bottom: 20px;
 }
 
-.footer-distributed .footer-icons {
-  margin-top: 25px;
+:root {
+  --background: #060D23;
+  --facebook: #0A66C2;
+  --x: #000;
+  --white: #FFF
 }
 
-.footer-distributed .footer-icons a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
+.btns-midias-sociais {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-midia-social {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  outline: 2px solid white;
   cursor: pointer;
-  background-color: #33383b;
-  border-radius: 2px;
-  font-size: 20px;
-  color: white;
-  text-align: center;
-  line-height: 35px;
-  margin-right: 3px;
-  margin-bottom: 5px;
+  transition: all 0.3s;
+  display: grid;
+  place-items: center;
 }
 
-.footer-distributed .footer-icons a:hover {
-  box-shadow: 0 0 10px white;
-  transition: 0.3s;
+.btn-midia-social:hover {
+  outline-offset: 3px;
+  transition: all 0.3s;
 }
 
-.footer-links a:hover {
-  color: white;
+img {
+  width: 15px;
+}
+
+.btn-midia-social img {
+  transition: all 0.2s;
+}
+
+.btn-midia-social:hover img {
+  transform: scale(1.15);
+}
+
+.btn-midia-social:hover:nth-child(1) {
+  background-color: var(--facebook);
+}
+
+.btn-midia-social:hover:nth-child(2) {
+  background: radial-gradient(
+    circle at 30% 107%, #FDF497 0%,
+    #FDF497 5%, #FD5949 45%,
+    #D6249F 60%, #285AEB 90%
+  );
+}
+
+.btn-midia-social:hover:nth-child(3) {
+  background-color: var(--x);
 }
 
 /* Estilos responsivos para tamanhos menores de tela */

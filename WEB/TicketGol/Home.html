@@ -8,7 +8,7 @@
 
   <!-- Título da Página e Ícone -->
   <title>TicketGol</title>
-  <link rel="icon" type="image/x-icon" href="Eventos/img/img-icone2.png" />
+  <link rel="icon" type="image/x-icon" href="Jogos/img/img-icone2.png" />
 
   <!-- Meta tags para Responsividade -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,9 +36,9 @@
 
     <ul>
       <!-- Links de navegação -->
-      <li><a href="Home.html">Início</a></li>
+      <li><a data-scroll="inicio" href="#inicio">Início</a></li>
       <li><a href="Jogos.html">Jogos</a></li>
-      <li><a href="Informacoes.html">Informações</a></li>
+      <li><a data-scroll="informacoes" href="#informacoes">Informações</a></li>
     </ul>
 
     <!-- Botão de login -->
@@ -51,6 +51,7 @@
   </header>
 
   <!-- Slider -->
+  <section id="inicio">
   <div class="slider">
 
     <div class="slides">
@@ -91,8 +92,10 @@
       <label for="radio4" class="manual-btn"></label>
     </div>
   </div>
+</section>
 
   <!-- Rodapé -->
+  <section id="informacoes">
   <footer class="footer-distributed">
     <div class="footer-left">
       <h3>Ticket<span>Gol</span></h3>
@@ -129,13 +132,23 @@
         <strong>TicketGol - </strong>Somos a sua porta de entrada para a emoção e a paixão dos grandes jogos. Na nossa
         plataforma, você encontrará uma ampla seleção de ingressos para os jogos mais emocionantes do momento.
       </p>
-      <div class="footer-icons">
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-      </div>
+
+      <div class="btns-midias-sociais">
+        <button class="btn-midia-social">
+            <img src="Home/img/img-iconeFace.png" class="img-icones">
+        </button>
+
+        <button class="btn-midia-social">
+            <img src="Home/img/img-iconeInsta.png" class="img-icones">
+        </button>
+
+        <button class="btn-midia-social">
+            <img src="Home/img/img-iconeX.png" class="img-icones">
+        </button>
+     </div>
     </div>
   </footer>
+</section>
 </body>
 
 </html>

@@ -1,184 +1,169 @@
 /* Definições gerais */
+/* Define configurações iniciais para todos os elementos */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: monospace;
+  margin: 0; /* Define a margem como 0 */
+  padding: 0; /* Define o preenchimento como 0 */
+  box-sizing: border-box; /* Define o modelo de caixa como border-box */
+  font-family: monospace; /* Define a fonte como monoespaçada */
+}
+
+html {
+  scroll-behavior: smooth; /* Adiciona um efeito de rolagem suave para a página */
 }
 
 /* Estilos para o cabeçalho */
 header {
-  width: 104.16%;
-  margin-left: -80px;
-  margin-top: -11%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0;
-  position: absolute;
-  background-color: #b5121b;
+  width: 104.16%; /* Ajusta a largura para compensar o overflow horizontal */
+  margin-left: -80px; /* Move o cabeçalho para a esquerda para compensar o ajuste da largura */
+  margin-top: -11%; /* Move o cabeçalho para cima para alinhar visualmente */
+  display: flex; /* Usa um layout flexível para o cabeçalho */
+  align-items: center; /* Alinha os itens verticalmente */
+  justify-content: space-between; /* Distribui o espaço disponível entre os elementos */
+  padding: 10px 0; /* Adiciona preenchimento superior e inferior */
+  position: absolute; /* Define a posição como absoluta */
+  background-color: #b5121b; /* Define a cor de fundo como vermelho */
 }
 
 /* Estilos para o corpo da página */
 body {
-  background-color: whitesmoke;
-  color: white;
+  color: white; /* Define a cor do texto como branco */
+  background: url(/teste/img/img-fundoTeste6.jpeg) no-repeat; /* Define a imagem de fundo */
+  background-size: cover; /* Faz a imagem de fundo cobrir todo o elemento */
+  background-position: center; /* Centraliza a imagem de fundo */
 }
 
 /* Estilos para a logo */
 .logo {
-  width: 205px;
-  cursor: pointer;
-  margin-left: 200%;
+  width: 205px; /* Define a largura da logo */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  margin-left: 100%; /* Move a logo para a direita */
 }
 
 .logo:hover {
-  transform: scale(0.93);
-  transition: all 0.5s;
+  transform: scale(0.93); /* Aplica uma escala de redução no hover */
+  transition: all 0.5s; /* Adiciona uma transição suave */
 }
 
 /* Estilos para o título do menu */
 .titulo-menu {
-  margin-left: 2px;
-  font-size: 25px;
-  cursor: pointer;
-  font-weight: bolder;
+  margin-left: 2px; /* Define a margem à esquerda */
+  font-size: 25px; /* Define o tamanho da fonte */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  font-weight: bolder; /* Define a espessura da fonte como negrito */
 }
 
 .titulo-menu:hover {
-  transform: scale(1.05);
-  transition: all 0.5s;
+  transform: scale(1.05); /* Aplica uma escala de aumento no hover */
+  transition: all 0.5s; /* Adiciona uma transição suave */
 }
 
 /* Estilos para a lista de links no cabeçalho */
 header ul {
-  list-style: none;
-  width: 100%;
-  text-align: right;
-  padding-right: 1%;
+  list-style: none; /* Remove os estilos padrão da lista */
+  width: 100%; /* Define a largura como 100% */
+  text-align: right; /* Alinha o texto à direita */
+  margin-right: 26%; /* Adiciona uma margem à direita */
 }
 
 header ul li {
-  display: inline-block;
-  margin: 10px 35px;
+  display: inline-block; /* Exibe os itens da lista em linha */
+  margin: 10px 35px; /* Adiciona margens aos itens da lista */
 }
 
 header ul li a {
-  font-size: 19px;
-  color: white;
-  text-decoration: none;
-  font-weight: bolder;
+  font-size: 19px; /* Define o tamanho da fonte */
+  color: white; /* Define a cor do texto como branco */
+  text-decoration: none; /* Remove a decoração do texto */
+  font-weight: bolder; /* Define a espessura da fonte como negrito */
 }
 
 header ul li:hover {
-  transform: scale(0.93);
-  transition: all 0.5s;
+  transform: scale(0.93); /* Aplica uma escala de redução no hover */
+  transition: all 0.5s; /* Adiciona uma transição suave */
 }
 
 /* Estilos para o botão */
 .btn {
-  display: flex;
-  align-items: center;
-  padding: 5px 8px;
-  border: 10;
-  border-color: white;
-  outline: 0;
-  border-radius: 7px;
-  background: none;
-  color: white;
-  font-size: 18px;
-  font-weight: 550;
-  cursor: pointer;
-  margin-right: 15%;
+  display: flex; /* Usa um layout flexível para o botão */
+  align-items: center; /* Alinha os itens verticalmente */
+  padding: 5px 8px; /* Adiciona preenchimento interno */
+  border: 10; /* Define a largura da borda */
+  border-color: white; /* Define a cor da borda como branco */
+  outline: 0; /* Remove o contorno ao focar */
+  border-radius: 15px; /* Adiciona bordas arredondadas */
+  background: none; /* Remove o plano de fundo */
+  color: white; /* Define a cor do texto como branco */
+  font-size: 18px; /* Define o tamanho da fonte */
+  font-weight: 550; /* Define a espessura da fonte */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  margin-right: 5%; /* Adiciona uma margem à direita */
 }
 
 .btn:hover {
-  transform: scale(0.93);
-  transition: 0.6s;
+  transform: scale(0.93); /* Aplica uma escala de redução no hover */
+  transition: 0.6s; /* Adiciona uma transição suave */
 }
 
 .btn a {
-  text-decoration: none;
-  color: white;
+  text-decoration: none; /* Remove a decoração do texto */
+  color: white; /* Define a cor do texto como branco */
 }
 
 .btn a:hover {
-  transform: none;
+  transform: none; /* Remove a escala no hover */
 }
 
 .btn img {
-  width: 20px;
-  margin-right: 11px;
+  width: 20px; /* Define a largura da imagem */
+  margin-right: 11px; /* Adiciona uma margem à direita */
 }
 
 /* Estilos para os cards */
 .card-pt1 {
-  margin-top: 11%;
-  display: flex;
-  gap: 3.5%;
-  place-items: center;
-  justify-content: center;
+  margin-top: 11%; /* Adiciona uma margem superior */
+  display: flex; /* Usa um layout flexível para os cards */
+  gap: 3.5%; /* Define o espaço entre os cards */
+  place-items: center; /* Alinha os itens no centro */
+  justify-content: center; /* Centraliza os cards */
 }
 
 .card-pt2 {
-  margin-top: 5%;
-  display: flex;
-  gap: 3.5%;
-  place-items: center;
-  justify-content: center;
+  margin-top: 5%; /* Adiciona uma margem superior */
+  display: flex; /* Usa um layout flexível para os cards */
+  gap: 3.5%; /* Define o espaço entre os cards */
+  place-items: center; /* Alinha os itens no centro */
+  justify-content: center; /* Centraliza os cards */
 }
 
 .card {
-  width: 280px;
-  height: 380px;
-  aspect-ratio: 1 / 0.7;
-  border-radius: 8px;
-  position: relative;
-  cursor: pointer;
+  width: 280px; /* Define a largura do card */
+  height: 380px; /* Define a altura do card */
+  aspect-ratio: 1 / 0.7; /* Define a proporção do card */
+  border-radius: 8px; /* Adiciona bordas arredondadas */
+  position: relative; /* Define a posição como relativa */
 }
 
 .card .image-box {
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
+  background: transparent; /* Define o plano de fundo como transparente */
+  width: 100%; /* Define a largura como 100% */
+  height: 100%; /* Define a altura como 100% */
+  border: 2px solid white; /* Adiciona uma borda branca */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  backdrop-filter: blur(1px) grayscale(0.2) brightness(0.7); /* Adiciona um efeito de desfoque */
 }
 
-.card .image-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 90%;
-  border-radius: inherit;
-  transition: 0.5s ease-in-out;
-  filter: grayscale(0.2) brightness(0.5);
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 2px solid white;
-  border-radius: inherit;
-  opacity: 0;
-  transition: 0.4s ease-in-out;
-}
-
-.card:hover img {
-  filter: grayscale(0.2) brightness(0.25);
-}
-
-.card:hover::after {
-  opacity: 100;
-  inset: 20px;
+.card:hover {
+  box-shadow: 0 0 20px white; /* Adiciona uma sombra ao passar o mouse */
+  transition: 0.3s; /* Adiciona uma transição suave */
 }
 
 .content {
-  width: 80%;
-  position: absolute;
-  top: 51%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  width: 80%; /* Define a largura como 80% */
+  position: absolute; /* Define a posição como absoluta */
+  top: 51%; /* Define a posição superior como 51% */
+  left: 50%; /* Define a posição esquerda como 50% */
+  transform: translate(-50%, -50%); /* Move o elemento para o centro */
+  text-align: center; /* Centraliza o texto */
 }
 
 .content h2,
@@ -186,269 +171,292 @@ header ul li:hover {
 .content img,
 .content h1,
 .content .img2 {
-  opacity: 0;
-  transition: 0.4s 0.2s ease;
+  opacity: 0; /* Define a opacidade como 0 */
+  transition: 0.4s 0.2s ease; /* Adiciona uma transição suave */
 }
 
 .content img {
-  width: 100px;
-  margin-right: 85px;
+  width: 100px; /* Define a largura da imagem */
+  margin-right: 85px; /* Adiciona uma margem à direita */
 }
 
 .content h1 {
-  font-size: 15px;
-  margin-top: -40px;
+  font-size: 15px; /* Define o tamanho da fonte */
+  margin-top: -40px; /* Move o texto para cima */
 }
 
 .content .img2 {
-  width: 100px;
-  margin-left: 105px;
-  margin-top: -35px;
+  width: 100px; /* Define a largura da imagem */
+  margin-left: 105px; /* Adiciona uma margem à esquerda */
+  margin-top: -35px; /* Move a imagem para cima */
 }
 
 .content .img3 {
-  width: 80px;
-  margin-left: 115px;
-  margin-top: -35px;
+  width: 80px; /* Define a largura da imagem */
+  margin-left: 115px; /* Adiciona uma margem à esquerda */
+  margin-top: -35px; /* Move a imagem para cima */
 }
 
 .content h2 {
-  margin-bottom: 12px;
-  scale: 0.7;
-  font-size: 17px;
-  margin-top: 30px;
+  margin-bottom: 12px; /* Adiciona uma margem inferior */
+  scale: 0.7; /* Define a escala como 0.7 */
+  font-size: 17px; /* Define o tamanho da fonte */
+  margin-top: 30px; /* Adiciona uma margem superior */
 }
 
 .content p {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #d1d1d1;
-  transform: translateY(50%);
+  font-size: 14px; /* Define o tamanho da fonte */
+  line-height: 1.5; /* Define a altura da linha */
+  color: #d1d1d1; /* Define a cor do texto como cinza claro */
+  transform: translateY(50%); /* Move o elemento verticalmente */
 }
 
 .card .content img {
-  scale: 1.2;
-  opacity: 3;
-  filter: none;
+  scale: 1.2; /* Define a escala como 1.2 */
+  opacity: 3; /* Define a opacidade como 3 */
+  filter: none; /* Remove o filtro */
 }
 
 .card .content h1 {
-  scale: 1.2;
-  opacity: 3;
+  scale: 1.2; /* Define a escala como 1.2 */
+  opacity: 3; /* Define a opacidade como 3 */
 }
 
 .card .content h2 {
-  scale: 1;
-  opacity: 1;
+  scale: 1; /* Define a escala como 1 */
+  opacity: 1; /* Define a opacidade como 1 */
 }
 
 .card .content p {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; /* Define a opacidade como 1 */
+  transform: translateY(0); /* Move o elemento verticalmente */
 }
 
 .btn-comprar {
-  padding: 6px 5px;
-  border: 10;
-  border-color: white;
-  outline: 0;
-  border-radius: 7px;
-  background: none;
-  color: white;
-  font-size: 15px;
-  font-weight: 400;
-  cursor: pointer;
-  margin-top: 25px;
+  padding: 6px 5px; /* Adiciona preenchimento interno */
+  border: 10; /* Define a largura da borda */
+  border-color: white; /* Define a cor da borda como branco */
+  outline: 0; /* Remove o contorno ao focar */
+  border-radius: 7px; /* Adiciona bordas arredondadas */
+  background: none; /* Remove o plano de fundo */
+  color: white; /* Define a cor do texto como branco */
+  font-size: 15px; /* Define o tamanho da fonte */
+  font-weight: 400; /* Define a espessura da fonte */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  margin-top: 25px; /* Adiciona uma margem superior */
+}
+
+.btn-comprar:hover {
+  transform: scale(1.1); /* Aplica uma escala de aumento no hover */
+  transition: 0.3s; /* Adiciona uma transição suave */
 }
 
 .btn-comprar a {
-  text-decoration: none;
-  color: white;
+  text-decoration: none; /* Remove a decoração do texto */
+  color: white; /* Define a cor do texto como branco */
 }
 
 .btn-comprar img {
-  width: 15px;
-  margin-right: 11px;
-  margin-bottom: -3px;
+  width: 15px; /* Define a largura da imagem */
+  margin-right: 11px; /* Adiciona uma margem à direita */
+  margin-bottom: -3px; /* Move a imagem para baixo */
 }
 
 /* Estilos para o rodapé */
 footer {
-  bottom: 0;
+  bottom: 0; /* Define a posição inferior como 0 */
 }
 
 @media(max-height:800px) {
   footer {
-    position: static;
+    position: static; /* Define a posição como estática */
   }
 
   header {
-    padding-top: 40px;
+    padding-top: 40px; /* Adiciona preenchimento superior */
   }
 }
 
 /* Estilos para o rodapé */
 .footer-distributed {
-  background-color: black;
-  box-sizing: border-box;
-  width: 100%;
-  text-align: left;
-  font: bold 16px sans-serif;
-  padding: 50px 50px 60px 50px;
-  margin-top: 80px;
+  background-color: black; /* Define a cor de fundo como preto */
+  box-sizing: border-box; /* Define o modelo de caixa como border-box */
+  width: 100%; /* Define a largura como 100% */
+  text-align: left; /* Alinha o texto à esquerda */
+  font: bold 16px sans-serif; /* Define a fonte */
+  padding: 50px 50px 60px 50px; /* Adiciona preenchimento */
+  margin-top: 80px; /* Adiciona uma margem superior */
 }
 
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,
 .footer-distributed .footer-right {
-  display: inline-block;
-  vertical-align: top;
+  display: inline-block; /* Exibe os elementos em linha */
+  vertical-align: top; /* Alinha os elementos ao topo */
 }
 
 /* Estilos para o rodapé - à esquerda */
 .footer-distributed .footer-left {
-  width: 30%;
+  width: 30%; /* Define a largura como 30% */
 }
 
 .footer-distributed h3 {
-  color: white;
-  font: normal 36px arial;
-  margin: 0;
+  color: white; /* Define a cor do texto como branco */
+  font: normal 36px arial; /* Define a fonte */
+  margin: 0; /* Define a margem como 0 */
 }
 
 .footer-distributed h3 span {
-  margin-left: 1.5px;
-  color: #b5121b;
+  margin-left: 1.5px; /* Adiciona uma margem à esquerda */
+  color: #b5121b; /* Define a cor do texto como vermelho */
 }
 
 /* Estilos para os links no rodapé */
 .footer-distributed .footer-links {
-  color: white;
-  margin: 20px 0 12px;
+  color: white; /* Define a cor do texto como branco */
+  margin: 20px 0 12px; /* Adiciona margens */
 }
 
 .footer-distributed .footer-links a {
-  display: inline-block;
-  line-height: 1.8;
-  text-decoration: none;
-  color: inherit;
+  display: inline-block; /* Exibe os elementos em linha */
+  line-height: 1.8; /* Define a altura da linha */
+  text-decoration: none; /* Remove a decoração do texto */
+  color: inherit; /* Herda a cor do texto */
 }
 
 .footer-distributed .footer-company-name {
-  color: #8f9296;
-  font-size: 14px;
-  font-weight: normal;
-  margin: 0;
+  color: #8f9296; /* Define a cor do texto como cinza */
+  font-size: 14px; /* Define o tamanho da fonte */
+  font-weight: normal; /* Define a espessura da fonte como normal */
+  margin: 0; /* Define a margem como 0 */
 }
 
 /* Estilos para o rodapé - ao centro */
 .footer-distributed .footer-center {
-  width: 35%;
+  width: 35%; /* Define a largura como 35% */
 }
 
-.footer-distributed .footer-center i {
-  background-color: #33383b;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 42px;
-  margin: 10px 15px;
-  vertical-align: middle;
+.footer-distributed .footer-center .icone-info {
+  background: transparent; /* Define o plano de fundo como transparente */
+  color: #ffffff; /* Define a cor do texto como branco */
+  width: 3rem; /* Define a largura */
+  height: 3rem; /* Define a altura */
+  border: 2px solid white; /* Adiciona uma borda branca */
+  border-radius: 50%; /* Adiciona bordas arredondadas */
+  text-align: center; /* Centraliza o texto */
+  line-height: 42px; /* Define a altura da linha */
+  margin: 10px 15px; /* Adiciona margens */
+  vertical-align: middle; /* Alinha verticalmente */
+  font-size: 15px; /* Define o tamanho da fonte */
 }
 
-.footer-distributed .footer-center i:hover {
-  box-shadow: 0 0 10px white;
-  transition: 0.3s;
-}
-
-.footer-distributed .footer-center i.fa-envelope {
-  font-size: 17px;
-  line-height: 38px;
+.footer-distributed .footer-center .icone-info:hover {
+  box-shadow: 0 0 10px white; /* Adiciona uma sombra ao passar o mouse */
+  transition: 0.3s; /* Adiciona uma transição suave */
 }
 
 .footer-distributed .footer-center p {
-  display: inline-block;
-  color: white;
-  vertical-align: middle;
-  margin: 0;
+  display: inline-block; /* Exibe os elementos em linha */
+  color: white; /* Define a cor do texto como branco */
+  vertical-align: middle; /* Alinha verticalmente */
+  margin: 0; /* Define a margem como 0 */
 }
 
 .footer-distributed .footer-center p span {
-  display: block;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 2;
+  display: block; /* Define os elementos como blocos */
+  font-weight: normal; /* Define a espessura da fonte como normal */
+  font-size: 14px; /* Define o tamanho da fonte */
+  line-height: 2; /* Define a altura da linha */
 }
 
 .footer-distributed .footer-center p a {
-  color: white;
-  text-decoration: none;
+  color: white; /* Define a cor do texto como branco */
+  text-decoration: none; /* Remove a decoração do texto */
 }
 
 /* Estilos para o rodapé - à direita */
 .footer-distributed .footer-right {
-  width: 30%;
+  width: 30%; /* Define a largura como 30% */
 }
 
 .footer-distributed .footer-company-about {
-  line-height: 20px;
-  color: #92999f;
-  font-size: 13px;
-  font-weight: normal;
-  margin: 0;
+  line-height: 20px; /* Define a altura da linha */
+  color: #92999f; /* Define a cor do texto como cinza */
+  font-size: 13px; /* Define o tamanho da fonte */
+  font-weight: normal; /* Define a espessura da fonte como normal */
+  margin: 0; /* Define a margem como 0 */
 }
 
 .footer-distributed .footer-company-about span {
-  display: block;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  display: block; /* Define os elementos como blocos */
+  color: white; /* Define a cor do texto como branco */
+  font-size: 18px; /* Define o tamanho da fonte */
+  font-weight: bold; /* Define a espessura da fonte como negrito */
+  margin-bottom: 20px; /* Adiciona uma margem inferior */
 }
 
-.footer-distributed .footer-icons {
-  margin-top: 25px;
+:root {
+  --background: #060D23; /* Define uma variável CSS para a cor de fundo */
+  --facebook: #0A66C2; /* Define uma variável CSS para a cor do Facebook */
+  --x: #000; /* Define uma variável CSS para a cor preta */
+  --white: #FFF /* Define uma variável CSS para a cor branca */
 }
 
-.footer-distributed .footer-icons a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  background-color: #33383b;
-  border-radius: 2px;
-  font-size: 20px;
-  color: white;
-  text-align: center;
-  line-height: 35px;
-  margin-right: 3px;
-  margin-bottom: 5px;
+.btns-midias-sociais {
+  margin-top: 20px; /* Adiciona uma margem superior */
+  display: flex; /* Usa um layout flexível para os botões de mídia social */
+  flex-wrap: wrap; /* Permite a quebra de linha */
+  gap: 1rem; /* Define o espaço entre os botões */
 }
 
-.footer-distributed .footer-icons a:hover {
-  box-shadow: 0 0 10px white;
-  transition: 0.3s;
+.btn-midia-social {
+  width: 3rem; /* Define a largura */
+  height: 3rem; /* Define a altura */
+  border: none; /* Remove a borda */
+  background-color: transparent; /* Define o plano de fundo como transparente */
+  border-radius: 50%; /* Adiciona bordas arredondadas */
+  outline: 2px solid white; /* Adiciona um contorno branco */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  transition: all 0.3s; /* Adiciona uma transição suave */
+  display: grid; /* Usa um layout de grade */
+  place-items: center; /* Alinha os itens no centro */
 }
 
-.footer-links a:hover {
-  color: white;
+.btn-midia-social:hover {
+  outline-offset: 3px; /* Define o deslocamento do contorno */
+  transition: all 0.3s; /* Adiciona uma transição suave */
+}
+
+img {
+  width: 15px; /* Define a largura da imagem */
+}
+
+.btn-midia-social img {
+  transition: all 0.2s; /* Adiciona uma transição suave */
+}
+
+.btn-midia-social:hover img {
+  transform: scale(1.15); /* Aplica uma escala de aumento no hover */
+}
+
+.btn-midia-social:hover:nth-child(1) {
+  background-color: var(--x); /* Define a cor de fundo */
+}
+
+.btn-midia-social:hover:nth-child(2) {
+  background-color: var(--x); /* Define a cor de fundo */
+}
+
+.btn-midia-social:hover:nth-child(3) {
+  background-color: var(--x); /* Define a cor de fundo */
 }
 
 /* Media query para telas menores */
 @media (max-width: 880px) {
+
   .footer-distributed .footer-left,
   .footer-distributed .footer-center,
   .footer-distributed .footer-right {
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-
-  .footer-distributed .footer-center i {
-    margin-left: 0;
+    /* Adicione estilos aqui para telas menores */
   }
 }
