@@ -3,7 +3,6 @@ package br.com.ticketgol.servlet;
 
 import br.com.ticketgol.dao.ClienteDAO;
 import br.com.ticketgol.model.Clientes;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,17 +20,19 @@ public class CadastroCliente extends HttpServlet {
         String dataDeNascimento = request.getParameter("dataDeNascimento");
         String email = request.getParameter("email");
         String telefone = request.getParameter("telefone");
+        String senha = request.getParameter("senhaCliente");
 
         Clientes clientes = new Clientes();
         clientes.setNomeCliente(nomeCliente);
         clientes.setDataDeNascimento(dataDeNascimento);
         clientes.setEmail(email);
         clientes.setTelefone(telefone);
+        clientes.setSenha(senha);
 
         ClienteDAO clienteDAO = new ClienteDAO();
         clienteDAO.cadastrarCliente(clientes);
 
-        request.getRequestDispatcher("index.html").forward(request, resp);
+        request.getRequestDispatcher("Login.html").forward(request, resp);
 
     }
 
