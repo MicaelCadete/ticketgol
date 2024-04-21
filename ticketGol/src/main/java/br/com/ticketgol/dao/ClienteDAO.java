@@ -3,6 +3,9 @@ package br.com.ticketgol.dao;
 import br.com.ticketgol.model.Clientes;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class ClienteDAO {
 
@@ -33,5 +36,26 @@ public class ClienteDAO {
 
     }
 
+    public boolean autenticar(String email, String senha) {
+
+        String SQL = "SELECT * FROM CLIENTE WHERE emailCliente = ? AND senhaCliente = ?";
+        try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+             PreparedStatement preparedStatement = connection.prepareStatement(SQL)) {
+            preparedStatement.setString(1, email);
+            preparedStatement.setString(2, senha);
+
+            try (ResultSet resultado = preparedStatement.executeQuery()) {
+                return resultado.next();
+            }
+
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+
 
 }
+

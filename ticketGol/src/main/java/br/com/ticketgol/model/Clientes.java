@@ -8,6 +8,14 @@ public class Clientes {
     private String telefone;
    private String senha;
 
+   public Clientes() {
+   }
+
+   public Clientes(String email, String senha) {
+      this.email = email;
+      this.senha = senha;
+   }
+
    public String getSenha() {
       return senha;
    }
@@ -47,4 +55,8 @@ public class Clientes {
    public void setTelefone(String telefone) {
       this.telefone = telefone;
    }
+
+
+
+
 }
