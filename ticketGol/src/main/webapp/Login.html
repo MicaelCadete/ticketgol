@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
 <head>
-  <!-- Meta tags -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Meta tags -->
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+ <!-- Título da página e ícone -->
+ <title>TicketGol</title>
+ <link rel="icon" type="image/x-icon" href="Jogos/img/img-icone2.png" />
   
-  <!-- Título da página e ícone -->
-  <title>TicketGol</title>
-  <link rel="icon" type="image/x-icon" href="Jogos/img/img-icone2.png" />
+ <!-- Estilos CSS -->
+ <link rel="stylesheet" href="Login/css/Login.css">
   
-  <!-- Estilos CSS -->
-  <link rel="stylesheet" href="Login/css/Login.css">
+ <!-- Font Awesome -->
+ <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
   
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
-  
-  <!-- Ícones Uicons -->
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+ <!-- Ícones Uicons -->
+ <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 <body>
-  <!-- Imagem de fundo -->
-  <img class="imagem" src="Login/img/img-fundoLogin.jpg">
+ <!-- Imagem de fundo -->
+ <img class="imagem" src="Login/img/img-fundoLogin.jpg">
   
-  <!-- Container principal -->
-  <div class="container">
+ <!-- Container principal -->
+ <div class="container">
     <!-- Logo -->
     <img class="logo" src="Login/img/ticket.png">
     
@@ -37,44 +37,42 @@
     
     <!-- Formulário de login -->
     <form id="signin" action="/login" method="post" >
-      <input type="text" name="emailLogin" id="emailLogin" required />
+      <input type="text" name="emailLogin" id="emailLogin" placeholder="Digite seu email:" required />
       <i class="fas fa-envelope iEmail"></i>
 
-      <input type="password" name="senhaLogin" id="senhaLogin" required />
+      <input type="password" name="senhaLogin" id="senhaLogin" placeholder="Digite sua senha:" required />
       <i class="fas fa-lock iPassword"></i>
 
       <div class="divCheck">
-        <input type="checkbox" />
-        <span>Remember Password</span>
       </div>
       <button type="submit">Sign in</button>
     </form>
 
-
     <!-- Formulário de cadastro -->
     <form id="signup" action="/create-clientes" method="post">
-      <input type="text" name="nomeCliente" id="nomeCliente" required />
-           <i class="fas fa-envelope iEmail"></i>
 
-      <input type="text" type="text" name="email" id="email" required />
-      <i class="fas fa-lock iPassword"></i>
+      <input type="text" name="nomeCliente" id="nomeCliente" placeholder="Digite seu nome:" required />
+      <i class="fi fi-ss-user iPassword3"></i>
 
-      <input type="text"  name="telefone" id="telefone" required />
-      <i class="fas fa-lock iPassword2"></i>
+      <input type="text" name="email" id="email" placeholder="Digite seu email:" required />
+      <i class="fas fa-envelope iPassword"></i>
 
-      <input type="text" name="dataDeNascimento" id="dataDeNascimento" required />
+      <input type="text" name="telefone" id="telefone" placeholder="Digite seu telefone:" required />
+      <i class="fi fi-sr-circle-phone iPassword2"></i>
+
+      <input type="text" name="dataDeNascimento" id="dataDeNascimento" placeholder="Digite a data de nascimento:" required />
       <i class="fi fi-rr-calendar iCalendar "></i>
 
-      <input type="password" name="senhaCliente" id="senhaCliente" required />
-      <i class="fi fi-rr-calendar iCalendar "></i>
+      <input type="password" name="senhaCliente" id="senhaCliente" placeholder="Digite sua senha:" required />
+      <i class="fas fa-lock iPassword4"></i>
 
       <div class="divCheck">
       </div>
       <button type="submit">Sign up</button>
     </form>
-  </div>
+ </div>
   
-  <!-- Scripts -->
-  <script src="Login/js/Login.js"></script>
+ <!-- Scripts -->
+ <script src="Login/js/Login.js"></script>
 </body>
 </html>

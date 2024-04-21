@@ -37,7 +37,7 @@ body {
 /* Estilos do formulário */
 form {
   position: absolute;
-  margin-top: 220px;
+  margin-top: 180px;
   transition: .5s;
   width: 300px;
   height: 400px;
@@ -46,7 +46,7 @@ form {
 
 /* Botões do formulário */
 .buttonsForm {
-  margin-top: 30px;
+  margin-top: 15px;
   position: relative;
   border-radius: 30px;
   box-shadow: 0 0 7px 0 #B5121B;
@@ -102,7 +102,7 @@ button[type="submit"] {
 
 /* Posicionamento dos formulários */
 #signin {
-  left: 1000px;
+  left: 450px;
 }
 
 #signup {
@@ -126,17 +126,26 @@ i {
 
 .iPassword2 {
   top: 160px;
+} 
+
+.iPassword3 {
+  top: 30px;
+}  
+
+.iPassword4 {
+  top: 293px;
 }   
 
 .iCalendar {
   top: 224px;
-}      
+} 
+          
 
 /* Estilos do logotipo */
 .logo {
   width: 100px;
   height: 100px;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 /* Estilos da imagem */
