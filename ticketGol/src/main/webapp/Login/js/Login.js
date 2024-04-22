@@ -2,16 +2,6 @@ var formSignin = document.querySelector('#signin')
 var formSignup = document.querySelector('#signup')
 var btnColor = document.querySelector('.btnColor')
 
-window.onload = function() {
-  var formSignin = document.querySelector('#signin');
-  var formSignup = document.querySelector('#signup');
-  var btnColor = document.querySelector('.btnColor');
-}
-
-formSignin.style.left = "25px";
-    formSignup.style.left = "-450px"; // Ocultando o formulário de cadastro inicialmente
-    btnColor.style.left = "0px";
-
 document.querySelector('#btnSignin')
   .addEventListener('click', () => {
     formSignin.style.left = "25px"

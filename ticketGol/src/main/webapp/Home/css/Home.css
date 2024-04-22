@@ -12,11 +12,9 @@ html {
 
 /* Estilos para o cabeçalho */
 header {
-  width: 104.16%;
-  /* Expandir além da largura da tela para evitar quebra de linha */
-  margin-left: -80px;
+  width: 100%;
   /* Ajuste para centralizar o cabeçalho */
-  margin-top: -11%;
+  margin-top: -12.5%;
   /* Ajuste para posição */
   display: flex;
   align-items: center;
@@ -40,7 +38,7 @@ body {
 .logo {
   width: 205px;
   cursor: pointer;
-  margin-left: 100%;
+  margin-left: 65%;
 }
 
 .logo:hover {
@@ -70,7 +68,7 @@ header ul {
   list-style: none;
   width: 100%;
   text-align: right;
-  margin-right: 26%;
+  margin-right: 19%;
 }
 
 header ul li {

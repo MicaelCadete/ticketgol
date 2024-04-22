@@ -13,9 +13,8 @@ html {
 
 /* Estilos para o cabeçalho */
 header {
-  width: 104.16%; /* Ajusta a largura para compensar o overflow horizontal */
-  margin-left: -80px; /* Move o cabeçalho para a esquerda para compensar o ajuste da largura */
-  margin-top: -11%; /* Move o cabeçalho para cima para alinhar visualmente */
+  width: 100%; /* Ajusta a largura para compensar o overflow horizontal */
+  margin-top: -12.5%; /* Move o cabeçalho para cima para alinhar visualmente */
   display: flex; /* Usa um layout flexível para o cabeçalho */
   align-items: center; /* Alinha os itens verticalmente */
   justify-content: space-between; /* Distribui o espaço disponível entre os elementos */
@@ -36,7 +35,7 @@ body {
 .logo {
   width: 205px; /* Define a largura da logo */
   cursor: pointer; /* Define o cursor como ponteiro */
-  margin-left: 100%; /* Move a logo para a direita */
+  margin-left: 65%; /* Move a logo para a direita */
 }
 
 .logo:hover {
@@ -62,7 +61,7 @@ header ul {
   list-style: none; /* Remove os estilos padrão da lista */
   width: 100%; /* Define a largura como 100% */
   text-align: right; /* Alinha o texto à direita */
-  margin-right: 26%; /* Adiciona uma margem à direita */
+  margin-right: 19%; /* Adiciona uma margem à direita */
 }
 
 header ul li {
@@ -128,7 +127,7 @@ header ul li:hover {
 }
 
 .card-pt2 {
-  margin-top: 5%; /* Adiciona uma margem superior */
+  margin-top: 2%; /* Adiciona uma margem superior */
   display: flex; /* Usa um layout flexível para os cards */
   gap: 3.5%; /* Define o espaço entre os cards */
   place-items: center; /* Alinha os itens no centro */
