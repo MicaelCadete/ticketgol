@@ -55,6 +55,22 @@ public class ClienteDAO {
         }
     }
 
+    public boolean verificarEmailExistente(String email) {
+        String SQL = "SELECT COUNT(*) FROM CLIENTE WHERE emailCliente = ?";
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setString(1, email);
+            ResultSet resultado = preparedStatement.executeQuery();
+            if (resultado.next()) {
+                int count = resultado.getInt(1);
+                return count > 0;
+            }
+        } catch (Exception e) {
+            System.out.println("Erro ao verificar email existente no banco!");
+        }
+        return false;
+    }
 
 
 }

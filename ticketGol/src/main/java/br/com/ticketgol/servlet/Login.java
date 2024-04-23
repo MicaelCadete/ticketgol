@@ -26,6 +26,7 @@ import java.util.List;
             request.getRequestDispatcher("Home.html").forward(request, resp);
         } else {
             System.out.println("Email ou senha incorretos.");
+            request.getRequestDispatcher("Login.html").forward(request, resp);
         }
     }
 
