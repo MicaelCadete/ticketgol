@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 public class EventoDAO {
     public void cadastrarEvento(Eventos evento) {
 
-        String SQL = "INSERT INTO EVENTO (nomeEvento, setor, local, data, qtdDisponivel) VALUES (?,?,?,?,?)";
+        String SQL = "INSERT INTO EVENTO (nomeEvento , setor, local , data, qtdDisponivel ) VALUES (?,?,?,?,?)";
         try {
 
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
