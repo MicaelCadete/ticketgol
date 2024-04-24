@@ -10,6 +10,7 @@
   <link rel="icon" type="image/x-icon" href="Jogos/img/img-icone2.png" />
 
   <link rel="stylesheet" href="Login/css/Login.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 
@@ -22,22 +23,18 @@
     </div>
 
     <!-- Formulário de login -->
-    <form id="signin" action="/login" method="post" >
+    <form id="signin" action="/login" method="post" autocomplete="off">
       <input type="text" name="emailLogin" id="emailLogin" required />
       <i class="fi fi-rr-envelope iEmailLogin" style="color: #ffffff;"></i>
 
       <input type="password" name="senhaLogin" id="senhaLogin" required />
       <i class="fi fi-rr-lock iLockLogin" style="color: #ffffff;"></i>
-
-      <div class="divCheck">
-        <input type="checkbox" />
-        <span>Lembrar Senha</span>
-      </div>
-      <button type="submit" class="btn-login">Login</button>
+      
+      <button class="btn-login"  onclick="logar(); return false">Login</button>
     </form>
 
     <!-- Formulário de cadastro -->
-    <form id="signup" action="/create-clientes" method="post">
+    <form id="signup" action="/create-clientes" method="post" autocomplete="off">
       <input type="text" name="nomeCliente" id="nomeCliente" required />
       <i class="fi fi-rr-user iUser" style="color: #ffffff;"></i>
 
@@ -55,11 +52,11 @@
 
       <div class="divCheck">
       </div>
-      <button type="submit" class="btn-cadastro">Cadastrar</button>
+      <button class="btn-cadastro" onclick="cadastrar(); return false">Cadastrar</button>
     </form>
   </div>
 
-  <script src="teste/js/teste.js"></script>
+  <script src="Login/js/Login.js"></script>
 </body>
 
 </html>

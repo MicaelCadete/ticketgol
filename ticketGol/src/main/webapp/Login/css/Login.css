@@ -93,7 +93,19 @@ input[type="password"] {
     color: white;
 }
 
-button[type="submit"] {
+.btn-login {
+    background: #B5121B;
+    color: white;
+    border-radius: 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 0 8px 15px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.btn-cadastro {
     background: #B5121B;
     color: white;
     border-radius: 30px;
