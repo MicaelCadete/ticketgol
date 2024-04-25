@@ -29,9 +29,9 @@ public class CadastroCliente extends HttpServlet {
         clientes.setTelefone(telefone);
         clientes.setSenha(senha);
 
-        ClienteDAO verificar = new ClienteDAO();
+        ClienteDAO confirmar = new ClienteDAO();
 
-        if (verificar.verificarEmailExistente(email)) {
+        if (confirmar.verificarEmailExistente(email)) {
             System.out.println("O email já foi cadastrado!");
             request.getRequestDispatcher("Login.html").forward(request, resp);
         }else{
