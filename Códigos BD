@@ -1,0 +1,19 @@
+CREATE TABLE Cliente(idCliente INT PRIMARY KEY AUTO_INCREMENT, nomeCliente VARCHAR(255), emailCliente VARCHAR(255), telefoneCliente VARCHAR(15), DATANASCIMENTOCLIENTE VARCHAR(10), senhaCliente VARCHAR(255));
+
+SELECT * FROM Cliente;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE Evento(idEvento INT PRIMARY KEY AUTO_INCREMENT, nomeEvento VARCHAR(255), setor VARCHAR(1), local VARCHAR(255), data VARCHAR(10), qtdDisponivel INT);
+SELECT * FROM Evento;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE Ingressos (IdIngressos INT PRIMARY KEY AUTO_INCREMENT, Setor VARCHAR(1), Preco float, idEventos int, CONSTRAINT fk_EventIngres FOREIGN KEY (idEvento) REFERENCES Evento (idEvento));
+SELECT * FROM Ingressos;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE MeusIngressos (Endereço VARCHAR(90), Preço FLOAT, Data DATE, Setor VARCHAR (1), idEventos int, CONSTRAINT fk_EventMyIngres FOREIGN KEY (idEvento) REFERENCES Evento (idEvento), idCliente int CONSTRAINT fk_ClientIngress FOREIGN KEY (idCliente) REFERENCES Cliente (idCliente))
+
+SELECT * FROM MeusIngressos;
