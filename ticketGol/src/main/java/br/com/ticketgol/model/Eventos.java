@@ -7,6 +7,11 @@ public class Eventos {
     private String data;
     private int qtdDisponivel;
 
+    public Eventos() {
+    }
+
+    private int idevento;
+
     public String getNomeEvento() {
         return nomeEvento;
     }
@@ -45,6 +50,15 @@ public class Eventos {
 
     public void setQtdDisponivel(int qtdDisponivel) {
         this.qtdDisponivel = qtdDisponivel;
+    }
+
+    public Eventos(String nomeEvento, String local, String setor, String data, int qtdDisponivel, int idevento) {
+        this.nomeEvento = nomeEvento;
+        this.local = local;
+        this.setor = setor;
+        this.data = data;
+        this.qtdDisponivel = qtdDisponivel;
+        this.idevento = idevento;
     }
 }
 

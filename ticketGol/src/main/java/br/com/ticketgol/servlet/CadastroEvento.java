@@ -1,8 +1,6 @@
 package br.com.ticketgol.servlet;
 
-import br.com.ticketgol.dao.ClienteDAO;
 import br.com.ticketgol.dao.EventoDAO;
-import br.com.ticketgol.model.Clientes;
 import br.com.ticketgol.model.Eventos;
 
 import javax.servlet.ServletException;
@@ -29,7 +27,6 @@ public class CadastroEvento extends HttpServlet {
             eventos.setLocal(local);
             eventos.setData(data);
             eventos.setQtdDisponivel(qtdDisponivel);
-
             EventoDAO eventodao = new EventoDAO();
             eventodao.cadastrarEvento(eventos);
 
