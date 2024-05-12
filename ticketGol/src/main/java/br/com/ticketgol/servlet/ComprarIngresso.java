@@ -18,19 +18,27 @@ import java.io.IOException;
 public class ComprarIngresso extends HttpServlet{
     protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
         String email = request.getParameter("email");
+        String senha = request.getParameter("senhaLogin");
 
-        // Verifica se algum campo está vazio
         if (email.isEmpty()) {
             System.out.println("Todos os campos devem ser preenchidos");
             request.getRequestDispatcher("compras.html").forward(request, resp);
-            return; // Interrompe o fluxo para evitar processamento adicional
+            return;
         }
 
-        // Se todos os campos estiverem preenchidos e qtdDisponivel for um número válido, continua com o processamento
+        ClienteDAO verificar = new ClienteDAO();
+
+        if (verificar.autenticar(email, senha)) {
+            System.out.println("Usuário autenticado com sucesso!");
+            request.getRequestDispatcher("Home.html").forward(request, resp);
+        } else {
+            System.out.println("Email ou senha incorretos.");
+            request.getRequestDispatcher("Login.html").forward(request, resp);
+        }
+
         Compras compras = new Compras();
         compras.setFk_cliente(email);
 
-        EventoDAO eventodao = new EventoDAO();
         ComprasDAO comprasdao = new ComprasDAO();
         comprasdao.CommprarIngresso(compras);
 
