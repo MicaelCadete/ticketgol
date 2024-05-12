@@ -6,11 +6,19 @@ public class Eventos {
     private String setor;
     private String data;
     private int qtdDisponivel;
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public Eventos() {
     }
 
-    private int idevento;
 
     public String getNomeEvento() {
         return nomeEvento;
@@ -58,7 +66,7 @@ public class Eventos {
         this.setor = setor;
         this.data = data;
         this.qtdDisponivel = qtdDisponivel;
-        this.idevento = idevento;
+        this.id = idevento;
     }
 }
 

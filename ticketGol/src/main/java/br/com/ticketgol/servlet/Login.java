@@ -20,14 +20,18 @@ import java.util.List;
 
         ClienteDAO verificar = new ClienteDAO();
 
-
-        if (verificar.autenticar(email, senha)) {
+        if ("adm".equals(email) && "adm".equals(senha)) {
+            System.out.println("Administrador logado!");
+            request.getRequestDispatcher("HomeADM.html").forward(request, resp);
+        } else if (verificar.autenticar(email, senha)) {
             System.out.println("Usuário autenticado com sucesso!");
             request.getRequestDispatcher("Home.html").forward(request, resp);
         } else {
             System.out.println("Email ou senha incorretos.");
             request.getRequestDispatcher("Login.html").forward(request, resp);
         }
+
+
     }
 
 }

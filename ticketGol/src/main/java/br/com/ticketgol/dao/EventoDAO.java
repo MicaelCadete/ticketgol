@@ -3,10 +3,7 @@ package br.com.ticketgol.dao;
 import br.com.ticketgol.model.Clientes;
 import br.com.ticketgol.model.Eventos;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -54,20 +51,20 @@ public class EventoDAO {
 
             while (resultSet.next()) {
 
-                int idEvento = resultSet.getInt("idevento");
+                int id = resultSet.getInt("idevento");
                 String nomeEvento = resultSet.getString("nomeevento");
                 String setor = resultSet.getString("setor");
                 String local = resultSet.getString("local");
                 String data = resultSet.getString("data");
                 int qtdDisponivel = resultSet.getInt("qtddisponivel");
 
-                Eventos dados = new Eventos (nomeEvento, local, setor, data, qtdDisponivel,idEvento);
-
+                Eventos dados = new Eventos (nomeEvento, local, setor, data, qtdDisponivel,id);
                 dadosEvento.add(dados);
 
             }
 
             System.out.println("Sucesso ao resgatar dados dos eventos no DB!");
+
 
             return dadosEvento;
 
@@ -80,4 +77,24 @@ public class EventoDAO {
         return Collections.emptyList();
 
     }
+
+    public void deletarEvento(int id) {
+        String SQL = "DELETE FROM EVENTO WHERE idEvento  = ?";
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setInt(1, id);
+            int rowsDeleted = preparedStatement.executeUpdate();
+            if (rowsDeleted > 0) {
+                System.out.println("Evento deletado com sucesso!");
+            } else {
+                System.out.println("Nenhum evento encontrado com o ID fornecido.");
+            }
+        } catch (SQLException e) {
+            System.out.println("Erro ao deletar evento: " + e.getMessage());
+        }
+    }
+
+
+
 }

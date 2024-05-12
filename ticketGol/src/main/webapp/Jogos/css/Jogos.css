@@ -257,6 +257,19 @@ header ul li:hover {
   cursor: pointer; /* Define o cursor como ponteiro */
   margin-top: 25px; /* Adiciona uma margem superior */
 }
+.btn-deletar {
+  padding: 6px 5px; /* Adiciona preenchimento interno */
+  border: 10; /* Define a largura da borda */
+  border-color: white; /* Define a cor da borda como branco */
+  outline: 0; /* Remove o contorno ao focar */
+  border-radius: 7px; /* Adiciona bordas arredondadas */
+  background: none; /* Remove o plano de fundo */
+  color: white; /* Define a cor do texto como branco */
+  font-size: 15px; /* Define o tamanho da fonte */
+  font-weight: 400; /* Define a espessura da fonte */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  margin-top: 25px; /* Adiciona uma margem superior */
+}
 
 .btn-comprar:hover {
   transform: scale(0.95); /* Aplica uma escala de aumento no hover */

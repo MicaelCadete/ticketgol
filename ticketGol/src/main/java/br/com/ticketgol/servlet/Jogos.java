@@ -13,7 +13,7 @@ import java.util.List;
 
 
     @WebServlet("/lista-eventos")
-    public class teste extends HttpServlet {
+    public class Jogos extends HttpServlet {
 
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
