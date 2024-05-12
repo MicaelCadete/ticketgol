@@ -14,7 +14,7 @@
 
       <!-- Configurações de visualização e estilos -->
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="stylesheet" type="text/css" media="screen" href="Jogos/css/Jogos.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="Jogos/css/JogosADM.css" />
 
       <!-- Fontes e ícones -->
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,7 +37,7 @@
              <!-- Links de navegação -->
              <li><a data-scroll="inicio" href="#inicio">Início</a></li>
              <li><a href="/lista-eventos2">Jogos</a></li>
-             <li><a href="cadastroEventos.html">Cadastrar Jogo</a></li>
+             <li><a href="CadastroJogos.html">Cadastrar Jogo</a></li>
            </ul>
         <!-- Botão de login -->
         <button class="btn">

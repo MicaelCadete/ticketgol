@@ -5,57 +5,57 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>TicketGol</title>
   <link rel="icon" type="image/x-icon" href="Jogos/img/img-icone2.png" />
 
   <link rel="stylesheet" href="Login/css/Login.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel='stylesheet'href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 
 <body>
-  <div class="container">
-    <div class="buttonsForm">
-      <div class="btnColor"></div>
-      <button id="btnSignin" class="btnLogin">Login</button>
-      <button id="btnSignup" class="btnCadastro">Cadastrar</button>
-    </div>
-
-    <!-- Formulário de login -->
-    <form id="signin" action="/login" method="post" autocomplete="off">
-      <input type="text" name="emailLogin" id="emailLogin" required placeholder="Digite seu email" />
-      <i class="fi fi-rr-envelope iEmailLogin" style="color: #ffffff;"></i>
-
-      <input type="password" name="senhaLogin" id="senhaLogin" required placeholder="Digite sua senha" />
-      <i class="fi fi-rr-lock iLockLogin" style="color: #ffffff;"></i>
-      
-      <button class="btn-login"  onclick="logar(); return false">Login</button>
-    </form>
-
-    <!-- Formulário de cadastro -->
-    <form id="signup" action="/create-clientes" method="post" autocomplete="off">
-      <input type="text" name="nomeCliente" id="nomeCliente" required placeholder="Digite seu nome" />
-      <i class="fi fi-rr-user iUser" style="color: #ffffff;"></i>
-
-      <input type="text" type="text" name="email" id="email" required placeholder="Digite seu email" />
-      <i class="fi fi-rr-envelope iEmail" style="color: #ffffff;"></i>
-
-      <input type="text" name="telefone" id="telefone" required placeholder="Digite o telefone" />
-      <i class="fi fi-rr-phone-call iPhone" style="color: #ffffff;"></i>
-
-      <input type="text" name="dataDeNascimento" id="dataDeNascimento" required placeholder="Digite a data de nascimento" />
-      <i class="fi fi-rr-calendar iCalendar" style="color: #ffffff;"></i>
-
-      <input type="password" name="senhaCliente" id="senhaCliente" required placeholder="Digite sua senha " />
-      <i class="fi fi-rr-lock iLock" style="color: #ffffff;"></i>
-
-      <div class="divCheck">
+    <div class="container">
+      <div class="buttonsForm">
+        <div class="btnColor"></div>
+        <button id="btnSignin" class="btnLogin">Login</button>
+        <button id="btnSignup" class="btnCadastro">Cadastrar</button>
       </div>
-      <button class="btn-cadastro" onclick="cadastrar(); return false">Cadastrar</button>
-    </form>
-  </div>
+
+      <!-- Formulário de login -->
+      <form id="signin" action="/login" method="post" autocomplete="off">
+        <input type="text" name="emailLogin" id="emailLogin" required placeholder="Digite seu email" />
+        <i class="fi fi-rr-envelope iEmailLogin" style="color: #ffffff;"></i>
+
+        <input type="password" name="senhaLogin" id="senhaLogin" required placeholder="Digite sua senha" />
+        <i class="fi fi-rr-lock iLockLogin" style="color: #ffffff;"></i>
+
+        <button class="btn-login" onclick="logar(); return false">Entrar</button>
+      </form>
+
+      <!-- Formulário de cadastro -->
+      <form id="signup" action="/create-clientes" method="post" autocomplete="off">
+        <input type="text" name="nomeCliente" id="nomeCliente" required placeholder="Digite seu nome" />
+        <i class="fi fi-rr-user iUser" style="color: #ffffff;"></i>
+
+        <input type="text" type="text" name="email" id="email" required placeholder="Digite seu email" />
+        <i class="fi fi-rr-envelope iEmail" style="color: #ffffff;"></i>
+
+        <input type="text" name="telefone" id="telefone" required placeholder="Digite o telefone" />
+        <i class="fi fi-rr-phone-call iPhone" style="color: #ffffff;"></i>
+
+        <input type="text" name="dataDeNascimento" id="dataDeNascimento" required
+          placeholder="Digite a data de nascimento" />
+        <i class="fi fi-rr-calendar iCalendar" style="color: #ffffff;"></i>
+
+        <input type="password" name="senhaCliente" id="senhaCliente" required placeholder="Digite sua senha " />
+        <i class="fi fi-rr-lock iLock" style="color: #ffffff;"></i>
+
+        <button class="btn-cadastro" onclick="cadastrar(); return false">Cadastrar</button>
+      </form>
+    </div>
 
   <script src="Login/js/Login.js"></script>
 </body>
+
 </html>

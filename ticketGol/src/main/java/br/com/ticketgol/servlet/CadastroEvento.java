@@ -23,7 +23,7 @@ public class CadastroEvento extends HttpServlet {
         if (nomeEvento.isEmpty() || setor.isEmpty() || local.isEmpty() || data.isEmpty() || qtdDisponivelStr.isEmpty()) {
             // Se algum campo estiver vazio, redireciona de volta ao formulário exibindo uma mensagem de erro
             System.out.println("Todos os campos devem ser preenchidos");
-            request.getRequestDispatcher("cadastroEventos.html").forward(request, resp);
+            request.getRequestDispatcher("CadastroJogos.html").forward(request, resp);
             return; // Interrompe o fluxo para evitar processamento adicional
         }
 
@@ -34,7 +34,7 @@ public class CadastroEvento extends HttpServlet {
         } catch (NumberFormatException e) {
             // Se qtdDisponivel não for um número válido, exibe uma mensagem de erro
             System.out.println("Quantidade disponível deve ser um número inteiro");
-            request.getRequestDispatcher("cadastroEventos.html").forward(request, resp);
+            request.getRequestDispatcher("CadastroJogos.html").forward(request, resp);
             return; // Interrompe o fluxo para evitar processamento adicional
         }
 

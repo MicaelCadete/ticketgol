@@ -144,7 +144,7 @@ header ul li:hover {
   border-radius: 8px; /* Adiciona bordas arredondadas */
   position: relative; /* Define a posição como relativa */
   margin-bottom: 60px;
-  backdrop-filter: grayscale(0.1) brightness(0.65);
+  backdrop-filter: grayscale(0.1) brightness(0.7);
 }
 
 .card .image-box {  
@@ -164,8 +164,7 @@ header ul li:hover {
   
 }
 
-.card:hover {
-  box-shadow: 0 0 20px white; /* Adiciona uma sombra ao passar o mouse */
+.card:hover { /* Adiciona uma sombra ao passar o mouse */
   transition: 0.3s; /* Adiciona uma transição suave */
 }
 
@@ -393,19 +392,16 @@ footer {
 .footer-distributed .footer-center i.fa-map-marker:hover {
   transform: scale(1.05); /* Aplica uma escala de aumento no hover */
   transition: all 0.3s;
-  box-shadow: 0 0 20px white;
 }
 
 .footer-distributed .footer-center i.fa-phone:hover {
   transform: scale(1.05); /* Aplica uma escala de aumento no hover */
-  transition: all 0.3s;
-  box-shadow: 0 0 20px white;
+  transition: all 0.3s; 
 }
 
 .footer-distributed .footer-center i.fa-envelope:hover {
   transform: scale(1.05); /* Aplica uma escala de aumento no hover */
   transition: all 0.3s;
-  box-shadow: 0 0 20px white;
 }
 
 .footer-distributed .footer-center p {

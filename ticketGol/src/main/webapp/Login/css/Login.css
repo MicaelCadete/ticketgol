@@ -18,20 +18,20 @@ body {
     background-position: center;
 }
 
-
 .container {
     background: transparent;
     padding: 6px;
-    width: 360px;
+    width: 370px;
     height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     overflow: hidden;
-    border: 2px solid white;
-    border-radius: 10px;
-    backdrop-filter: blur(3px) grayscale(0.1) brightness(0.2);
+    border: 3px solid #b5121a;
+    box-shadow: 0px 0px 30px 1px rgb(168, 3, 3);
+    border-radius: 15px;
+    backdrop-filter: blur(3px) grayscale(0.2) brightness(0.55);
 }
 
 form {
@@ -56,21 +56,58 @@ form {
     border: none;
     position: relative;
     padding: 10px 21px;
+    color: white;
 }
 
 .btnColor {
     position: absolute;
-    width: 112px;
+    width: 107px;
     height: 100%;
     background: linear-gradient(to right, #b5121a, #b5121ab0);
     border-radius: 30px;
     transition: .3s;
 }
 
-.btnLogin {
+.btnLogin{
+    font-size: 16px;
+    left: 11px;
+}
+
+.btnCadastro{
+    font-size: 16px;
+    left: 7.5px;
+}
+
+#signin .btn-login {
     color: white;
-    font-size: 15px;
-    margin-left: 7px;
+    font-size: 17px;
+    background: linear-gradient(to right, #b5121a, #b5121ab0);
+    border-radius: 20px;
+    width: 50%;
+    height: 10%;
+    border: 2px solid #b5121a;
+    box-shadow: 0 0 10px 0 #B5121B;
+    cursor: pointer;
+    margin-left: 24%;
+}
+
+#signin .btn-login:hover {
+    transform: scale(0.95);
+    transition: all 0.3s;
+}
+
+#signup .btn-cadastro {
+    color: white;
+    font-size: 17px;
+    background: linear-gradient(to right, #b5121a, #b5121ab0);
+    border-radius: 20px;
+    width: 50%;
+    height: 10%;
+    border: 2px solid #b5121a;
+    box-shadow: 0 0 10px 0 #B5121B;
+    cursor: pointer;
+    margin-left: 24%;
+    margin-top: 40px;
 }
 
 .btnCadastro {
@@ -88,20 +125,9 @@ input[type="password"] {
     outline: none;
     width: 100%;
     background: transparent;
-    box-shadow: 0 0 20px 0 #B5121B;
+    box-shadow: 0 0 12px 0 #B5121B;
     color: white;
-}
-
-button[type="submit"] {
-    background: #B5121B;
-    color: white;
-    border-radius: 30px;
-    width: 100%;
-    border: none;
-    outline: none;
-    padding: 8px 0 8px 15px;
-    font-size: 17px;
-    cursor: pointer;
+    border: 2px solid #b5121a;
 }
 
 .btn-login {
@@ -112,15 +138,9 @@ button[type="submit"] {
     margin-top: 15px;
 }
 
-.divCheck {
-    margin: 10px 0 0 5px;
-    width: 80%;
-    font-size: 13px;
-}
-
 #signin {
     left: 25px;
-    margin-top: 45%;
+    margin-top: 50%;
 }
 
 #signup {
@@ -135,36 +155,43 @@ i {
 }
 
 .iEmailLogin {
-    top: 4.5%;
+    top: 4.9%;
+    left: 1%;
     font-size: 17px;
 }
 
 .iLockLogin {
-    top: 18.5%;
+    top: 19.6%;
+    left: 1%;
     font-size: 17px;
 }
 
 .iUser {
-    top: 4.5%;
+    top: 4.9%;
+    left: 1%;
     font-size: 17px;
 }
 
 .iEmail {
-    top: 18.5%;
+    top: 19.7%;
+    left: 1%;
     font-size: 17px;
 }
 
 .iPhone {
-    top: 32.5%;
+    top: 34.7%;
+    left: 1%;
     font-size: 17px;
 }
 
 .iCalendar {
-    top: 46.3%;
+    top: 49%;
+    left: 1%;
     font-size: 17px;
 }
 
 .iLock {
-    top: 60.4%;
+    top: 63.7%;
+    left: 1%;
     font-size: 17px;
 }

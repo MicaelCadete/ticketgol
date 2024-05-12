@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
+* {
+
+    font-family: 'Outfit', sans-serif;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: url(/teste/img/img-fundoTeste6.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid white;
+    border-radius: 15px;
+    color: white;
+    backdrop-filter: blur(3px) grayscale(0.1) brightness(0.65);
+}
+
+.field {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    margin-bottom: 50px;
+}
+
+label{
+    margin: 3px;
+    font-size: 17px;
+}
+
+input {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 10px;
+    width: 120%;
+    padding: 5px;
+}
+
+button {
+    background: transparent;
+    color: white;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 25px;
+    cursor: pointer;
+}

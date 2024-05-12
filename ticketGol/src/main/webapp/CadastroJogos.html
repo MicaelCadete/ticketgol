@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Jogos</title>
+
+    <link rel="stylesheet" href="Jogos/css/CadastroJogos.css">
+    <link rel='stylesheet'href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cadastro de Eventos</h1>
+
+        <form action="/create-evento" method="post">
+
+            <div class="field">
+                <label>Nome do Evento:</label>
+                <input type="text" name="nomeEvento" id="nomeEvento" required placeholder="Digite o Nome">
+
+                <label>Setor:</label>
+                <input type="text" name="setor" id="setor" required placeholder="Digite o Setor">
+
+                <label>Local do Evento:</label>
+                <input type="text" name="local" id="local" required placeholder="Digite o Local">
+
+                <label>Data do Evento:</label>
+                <input type="text" name="data" id="data" required placeholder="Digite a Data">
+
+                <label>Quantidade Disponível:</label>
+                <input type="number" name="qtdDisponivel" id="qtdDisponivel" required placeholder="Digite a Quantidade Disponível">
+
+                <button type="submit">Cadastrar</button>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
