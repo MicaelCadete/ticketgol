@@ -29,10 +29,9 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
+    border: 2px solid white;
     border-radius: 10px;
-    box-shadow: 0 0 20px #B5121B;
-    backdrop-filter: blur(3px) grayscale(0.2) brightness(0.7);
-    ;
+    backdrop-filter: blur(3px) grayscale(0.1) brightness(0.2);
 }
 
 form {

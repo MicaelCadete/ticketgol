@@ -124,6 +124,8 @@ header ul li:hover {
   gap: 3.5%; /* Define o espaço entre os cards */
   place-items: center; /* Alinha os itens no centro */
   justify-content: center; /* Centraliza os cards */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card-pt2 {
@@ -135,20 +137,31 @@ header ul li:hover {
 }
 
 .card {
+  background: transparent;
   width: 280px; /* Define a largura do card */
   height: 380px; /* Define a altura do card */
   aspect-ratio: 1 / 0.7; /* Define a proporção do card */
   border-radius: 8px; /* Adiciona bordas arredondadas */
   position: relative; /* Define a posição como relativa */
+  margin-bottom: 60px;
+  backdrop-filter: grayscale(0.1) brightness(0.65);
 }
 
-.card .image-box {
-  background: transparent; /* Define o plano de fundo como transparente */
+.card .image-box {  
   width: 100%; /* Define a largura como 100% */
   height: 100%; /* Define a altura como 100% */
   border: 2px solid white; /* Adiciona uma borda branca */
   border-radius: 10px; /* Adiciona bordas arredondadas */
-  backdrop-filter: blur(1px) grayscale(0.2) brightness(0.7); /* Adiciona um efeito de desfoque */
+}
+
+.card .image-box img{  
+  width: 15%; /* Define a largura como 100% */
+  height: 11%; /* Define a altura como 100% */
+  border: 2px solid white; /* Adiciona uma borda branca */
+  border-radius: 50%; /* Adiciona bordas arredondadas */
+  margin-left: 42.5%;
+  margin-top: 24%;
+  
 }
 
 .card:hover {
@@ -159,7 +172,7 @@ header ul li:hover {
 .content {
   width: 80%; /* Define a largura como 80% */
   position: absolute; /* Define a posição como absoluta */
-  top: 51%; /* Define a posição superior como 51% */
+  top: 63%; /* Define a posição superior como 51% */
   left: 50%; /* Define a posição esquerda como 50% */
   transform: translate(-50%, -50%); /* Move o elemento para o centro */
   text-align: center; /* Centraliza o texto */
@@ -180,7 +193,7 @@ header ul li:hover {
 }
 
 .content h1 {
-  font-size: 15px; /* Define o tamanho da fonte */
+  font-size: 22px; /* Define o tamanho da fonte */
   margin-top: -40px; /* Move o texto para cima */
 }
 
@@ -206,7 +219,7 @@ header ul li:hover {
 .content p {
   font-size: 14px; /* Define o tamanho da fonte */
   line-height: 1.5; /* Define a altura da linha */
-  color: #d1d1d1; /* Define a cor do texto como cinza claro */
+  color: white; /* Define a cor do texto como cinza claro */
   transform: translateY(50%); /* Move o elemento verticalmente */
 }
 
@@ -246,7 +259,7 @@ header ul li:hover {
 }
 
 .btn-comprar:hover {
-  transform: scale(1.1); /* Aplica uma escala de aumento no hover */
+  transform: scale(0.95); /* Aplica uma escala de aumento no hover */
   transition: 0.3s; /* Adiciona uma transição suave */
 }
 
@@ -257,8 +270,8 @@ header ul li:hover {
 
 .btn-comprar img {
   width: 15px; /* Define a largura da imagem */
-  margin-right: 11px; /* Adiciona uma margem à direita */
-  margin-bottom: -3px; /* Move a imagem para baixo */
+  margin-right: 10px; /* Adiciona uma margem à direita */
+  margin-bottom: -2px; /* Move a imagem para baixo */
 }
 
 /* Estilos para o rodapé */
@@ -335,23 +348,51 @@ footer {
   width: 35%; /* Define a largura como 35% */
 }
 
-.footer-distributed .footer-center .icone-info {
-  background: transparent; /* Define o plano de fundo como transparente */
-  color: #ffffff; /* Define a cor do texto como branco */
-  width: 3rem; /* Define a largura */
-  height: 3rem; /* Define a altura */
-  border: 2px solid white; /* Adiciona uma borda branca */
-  border-radius: 50%; /* Adiciona bordas arredondadas */
-  text-align: center; /* Centraliza o texto */
-  line-height: 42px; /* Define a altura da linha */
-  margin: 10px 15px; /* Adiciona margens */
-  vertical-align: middle; /* Alinha verticalmente */
-  font-size: 15px; /* Define o tamanho da fonte */
+.footer-distributed .footer-center i {
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  outline: 2px solid white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
 }
 
-.footer-distributed .footer-center .icone-info:hover {
-  box-shadow: 0 0 10px white; /* Adiciona uma sombra ao passar o mouse */
-  transition: 0.3s; /* Adiciona uma transição suave */
+.footer-distributed .footer-center i:hover {
+  transition: all 0.3s; /* Adiciona uma transição suave */
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center i.fa-map-marker {
+  line-height: 38px;
+}
+
+
+.footer-distributed .footer-center i.fa-map-marker:hover {
+  transform: scale(1.05); /* Aplica uma escala de aumento no hover */
+  transition: all 0.3s;
+  box-shadow: 0 0 20px white;
+}
+
+.footer-distributed .footer-center i.fa-phone:hover {
+  transform: scale(1.05); /* Aplica uma escala de aumento no hover */
+  transition: all 0.3s;
+  box-shadow: 0 0 20px white;
+}
+
+.footer-distributed .footer-center i.fa-envelope:hover {
+  transform: scale(1.05); /* Aplica uma escala de aumento no hover */
+  transition: all 0.3s;
+  box-shadow: 0 0 20px white;
 }
 
 .footer-distributed .footer-center p {
