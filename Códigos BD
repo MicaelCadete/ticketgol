@@ -8,3 +8,5 @@ CREATE TABLE Evento(idEvento INT PRIMARY KEY AUTO_INCREMENT, nomeEvento VARCHAR(
 SELECT * FROM Evento;
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE Ingressos(idIngresso INT PRIMARY KEY AUTO_INCREMENT, CONSTRAINT fk_Evento FOREIGN KEY (nomeEvento) REFERENCES Evento (nomeEvento), CONSTRAINT fk_Cliente FOREIGN KEY (emailCliente) REFERENCES Cliente (emailCliente));
