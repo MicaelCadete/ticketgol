@@ -68,12 +68,12 @@ form {
     transition: .3s;
 }
 
-.btnLogin{
+.btnLogin {
     font-size: 16px;
     left: 11px;
 }
 
-.btnCadastro{
+.btnCadastro {
     font-size: 16px;
     left: 7.5px;
 }
@@ -106,8 +106,8 @@ form {
     border: 2px solid #b5121a;
     box-shadow: 0 0 10px 0 #B5121B;
     cursor: pointer;
-    margin-left: 24%;
-    margin-top: 40px;
+    margin-left: 25%;
+    margin-top: 10px;
 }
 
 .btnCadastro {

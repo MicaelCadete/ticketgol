@@ -23,8 +23,9 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    border: 3px solid white;
+    border: 3px solid #b5121a;
     border-radius: 15px;
+    box-shadow: 0px 0px 30px 1px rgb(168, 3, 3);
     color: white;
     backdrop-filter: blur(3px) grayscale(0.1) brightness(0.65);
 }
@@ -36,11 +37,11 @@ body {
     flex-direction: column;
 }
 
-h1{
+h1 {
     margin-bottom: 50px;
 }
 
-label{
+label {
     margin: 3px;
     font-size: 17px;
 }
@@ -48,7 +49,8 @@ label{
 input {
     background: transparent;
     color: white;
-    border: 2px solid white;
+    box-shadow: 0 0 12px 0 #B5121B;
+    border: 2px solid #b5121a;
     border-radius: 10px;
     margin: 10px;
     width: 120%;
@@ -58,8 +60,10 @@ input {
 button {
     background: transparent;
     color: white;
-    border: 3px solid white;
+    border: 2px solid #b5121a;
+    background: linear-gradient(to right, #b5121a, #b5121ab0);
     border-radius: 10px;
+    box-shadow: 0 0 10px 0 #B5121B;
     margin: 10px;
     margin-top: 40px;
     margin-bottom: 25px;

@@ -33,16 +33,16 @@
         <a href="Home.html">
           <img src="Jogos/img/img-logo3.png" class="logo">
         </a>
-       <ul>
-             <!-- Links de navegação -->
-             <li><a data-scroll="inicio" href="#inicio">Início</a></li>
-             <li><a href="/lista-eventos2">Jogos</a></li>
-             <li><a href="CadastroJogos.html">Cadastrar Jogo</a></li>
-           </ul>
+        <ul>
+          <!-- Links de navegação -->
+          <li><a data-scroll="inicio" href="HomeADM.html">Início</a></li>
+          <li><a href="/lista-eventos2">Jogos</a></li>
+          <li><a href="JogosCadastro.html">Cadastrar Jogo</a></li>
+        </ul>
         <!-- Botão de login -->
         <button class="btn">
           <a href="Login.html" class="btn">
-            <img src="Jogos/img/img-entrar.png" alt="Entrar">Login
+            <img src="Home/img/img-iconeUser.png" alt="Entrar">Login
           </a>
         </button>
       </header>
@@ -97,7 +97,7 @@
               |
               <a href="Jogos.html">Eventos</a>
               |
-              <a href="Informacoes.html">Informações</a>
+              <a href="">Informações</a>
             </p>
             <p class="footer-company-name">Copyright © 2021 <strong>TicketGol</strong> All rights reserved</p>
           </div>

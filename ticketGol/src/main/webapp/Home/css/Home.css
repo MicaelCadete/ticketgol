@@ -1,9 +1,9 @@
-/* Definição de estilos para todos os elementos */
+/* Estilos para todos os elementos */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
 html {
@@ -13,103 +13,67 @@ html {
 /* Estilos para o cabeçalho */
 header {
   width: 100%;
-  /* Ajuste para centralizar o cabeçalho */
-  margin-top: -12.5%;
-  /* Ajuste para posição */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
-  position: absolute;
+  padding: 10px 20px;
   background-color: #b5121b;
-  /* Cor de fundo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-/* Estilos para o corpo da página */
-body {
-  color: white;
-  /* Cor do texto */
-  background: url(/teste/img/img-fundoTeste6.jpeg) no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Estilos para o logotipo */
 .logo {
-  width: 205px;
+  width: 150px;
   cursor: pointer;
-  margin-left: 65%;
 }
 
 .logo:hover {
   transform: scale(0.93);
-  /* Efeito de escala no hover */
   transition: all 0.5s;
-  /* Duração da transição */
 }
 
-/* Estilos para o título do menu */
-.titulo-menu {
-  margin-left: 2px;
-  font-size: 25px;
-  cursor: pointer;
-  font-weight: 400;
-}
-
-.titulo-menu:hover {
-  transform: scale(1.05);
-  /* Efeito de escala no hover */
-  transition: all 0.5s;
-  /* Duração da transição */
-}
-
-/* Estilos para a lista de links no cabeçalho */
 header ul {
   list-style: none;
-  width: 100%;
-  text-align: right;
-  margin-right: 19%;
+  display: flex;
+  gap: 20px;
 }
 
 header ul li {
   display: inline-block;
-  margin: 10px 35px;
 }
 
 header ul li a {
-  font-size: 19px;
+  font-size: 16px;
   color: white;
   text-decoration: none;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 header ul li:hover {
   transform: scale(0.93);
-  /* Efeito de escala no hover */
   transition: all 0.5s;
-  /* Duração da transição */
 }
 
-/* Estilos para o botão */
+
+/* Estilos para o botão de login */
 .btn {
   display: flex;
   align-items: center;
-  padding: 5px 8px;
-  border-color: white;
-  outline: 0;
+  padding: 5px 15px;
+  border: 2px solid white;
   border-radius: 15px;
   background: none;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 550;
   cursor: pointer;
-  margin-right: 5%;
 }
 
 .btn:hover {
-  /* Efeito de escala no hover */
-  transform: scale(0.93);
-  transition: 0.6s;
+  transform: scale(0.95);
+  transition: all 0.4s;
 }
 
 .btn a {
@@ -117,13 +81,48 @@ header ul li:hover {
   color: white;
 }
 
-.btn a:hover {
-  transform: none;
-}
-
 .btn img {
   width: 20px;
-  margin-right: 11px;
+  margin-right: 8px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .logo {
+    width: 130px;
+    margin-bottom: 10px;
+  }
+
+  header ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  header ul li {
+    display: block;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+/* Estilos para o corpo da página */
+body {
+  color: white;
+  background: url(/teste/img/img-fundoTeste6.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Estilos para o slider */
@@ -180,6 +179,7 @@ header ul li:hover {
 .manual-btn:hover {
   background-color: #b5121b;
 }
+
 
 #radio1:checked~.first {
   margin-left: 0;
@@ -407,47 +407,50 @@ footer {
 }
 
 .btn-midia-social {
-  width: 3rem; /* Define a largura */
-  height: 3rem; /* Define a altura */
-  border: none; /* Remove a borda */
-  background-color: transparent; /* Define o plano de fundo como transparente */
-  border-radius: 50%; /* Adiciona bordas arredondadas */
-  outline: 2px solid white; /* Adiciona um contorno branco */
-  cursor: pointer; /* Define o cursor como ponteiro */
-  transition: all 0.3s; /* Adiciona uma transição suave */
-  display: grid; /* Usa um layout de grade */
-  place-items: center; /* Alinha os itens no centro */
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  outline: 2px solid white;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: grid;
+  place-items: center;
 }
 
 .btn-midia-social:hover {
-  outline-offset: 3px; /* Define o deslocamento do contorno */
-  transition: all 0.3s; /* Adiciona uma transição suave */
+  outline-offset: 3px;
+  transition: all 0.3s;
 }
 
-img {
-  width: 15px; /* Define a largura da imagem */
+.img-icones {
+  width: 15px;
 }
 
 .btn-midia-social img {
-  transition: all 0.2s; /* Adiciona uma transição suave */
+  transition: all 0.2s;
 }
 
 .btn-midia-social:hover img {
-  transform: scale(1.15); /* Aplica uma escala de aumento no hover */
+  transform: scale(1.15);
 }
 
 .btn-midia-social:hover:nth-child(1) {
-  background-color: var(--x); /* Define a cor de fundo */
+  background-color: var(--facebook);
 }
 
 .btn-midia-social:hover:nth-child(2) {
-  background-color: var(--x); /* Define a cor de fundo */
+  background: radial-gradient(
+    circle at 30% 107%, #FDF497 0%,
+    #FDF497 5%, #FD5949 45%,
+    #D6249F 60%, #285AEB 90%
+  );
 }
 
 .btn-midia-social:hover:nth-child(3) {
-  background-color: var(--x); /* Define a cor de fundo */
+  background-color: var(--x);
 }
-
 /* Estilos responsivos para tamanhos menores de tela */
 @media (max-width: 880px) {
 
