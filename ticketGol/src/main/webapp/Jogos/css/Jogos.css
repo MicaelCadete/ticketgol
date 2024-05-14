@@ -1,90 +1,160 @@
 /* Definições gerais */
+/* Define configurações iniciais para todos os elementos */
 * {
   margin: 0;
+  /* Define a margem como 0 */
   padding: 0;
+  /* Define o preenchimento como 0 */
   box-sizing: border-box;
+  /* Define o modelo de caixa como border-box */
   font-family: monospace;
+  /* Define a fonte como monoespaçada */
 }
 
 html {
   scroll-behavior: smooth;
+  /* Adiciona um efeito de rolagem suave para a página */
 }
 
 /* Estilos para o cabeçalho */
 header {
   width: 100%;
+  /* Ajusta a largura para compensar o overflow horizontal */
+  margin-top: -12.5%;
+  /* Move o cabeçalho para cima para alinhar visualmente */
   display: flex;
+  /* Usa um layout flexível para o cabeçalho */
   align-items: center;
+  /* Alinha os itens verticalmente */
   justify-content: space-between;
-  padding: 10px 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
+  /* Distribui o espaço disponível entre os elementos */
+  padding: 10px 0;
+  /* Adiciona preenchimento superior e inferior */
+  position: absolute;
+  /* Define a posição como absoluta */
   background-color: #b5121b;
+  /* Define a cor de fundo como vermelho */
 }
 
+/* Estilos para o corpo da página */
+body {
+  color: white;
+  /* Define a cor do texto como branco */
+  background: url(/teste/img/img-fundoTeste6.jpeg) no-repeat;
+  /* Define a imagem de fundo */
+  background-size: cover;
+  /* Faz a imagem de fundo cobrir todo o elemento */
+  background-position: center;
+  /* Centraliza a imagem de fundo */
+}
+
+/* Estilos para a logo */
 .logo {
-  width: 125px;
+  width: 205px;
+  /* Define a largura da logo */
   cursor: pointer;
+  /* Define o cursor como ponteiro */
+  margin-left: 65%;
+  /* Move a logo para a direita */
 }
 
+.logo:hover {
+  transform: scale(0.93);
+  /* Aplica uma escala de redução no hover */
+  transition: all 0.5s;
+  /* Adiciona uma transição suave */
+}
+
+/* Estilos para o título do menu */
 .titulo-menu {
-  font-size: 18px;
+  margin-left: 2px;
+  /* Define a margem à esquerda */
+  font-size: 25px;
+  /* Define o tamanho da fonte */
+  cursor: pointer;
+  /* Define o cursor como ponteiro */
+  font-weight: bolder;
+  /* Define a espessura da fonte como negrito */
 }
 
+.titulo-menu:hover {
+  transform: scale(1.05);
+  /* Aplica uma escala de aumento no hover */
+  transition: all 0.5s;
+  /* Adiciona uma transição suave */
+}
+
+/* Estilos para a lista de links no cabeçalho */
 header ul {
   list-style: none;
+  /* Remove os estilos padrão da lista */
+  width: 100%;
+  /* Define a largura como 100% */
   text-align: right;
+  /* Alinha o texto à direita */
+  margin-right: 19%;
+  /* Adiciona uma margem à direita */
 }
 
 header ul li {
   display: inline-block;
-  margin: 10px 15px;
+  /* Exibe os itens da lista em linha */
+  margin: 10px 35px;
+  /* Adiciona margens aos itens da lista */
 }
 
 header ul li a {
-  font-size: 16px;
+  font-size: 19px;
+  /* Define o tamanho da fonte */
+  color: white;
+  /* Define a cor do texto como branco */
+  text-decoration: none;
+  /* Remove a decoração do texto */
+  font-weight: bolder;
+  /* Define a espessura da fonte como negrito */
 }
 
+header ul li:hover {
+  transform: scale(0.93);
+  /* Aplica uma escala de redução no hover */
+  transition: all 0.5s;
+  /* Adiciona uma transição suave */
+}
+
+/* Estilos para o botão */
 .btn {
-  padding: 5px 10px;
-  font-size: 16px;
-  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  border-color: white;
+  outline: 0;
+  border-radius: 15px;
+  background: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 550;
+  cursor: pointer;
+  margin-right: 5%;
+}
+
+.btn:hover {
+  /* Efeito de escala no hover */
+  transform: scale(0.95);
+  transition: all 0.4s;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn a:hover {
+  transform: none;
 }
 
 .btn img {
-  width: 18px;
-  margin-right: 8px;
-}
-
-/* Media query para telas menores */
-@media only screen and (max-width: 600px) {
-  .logo {
-    width: 100px;
-  }
-
-  .titulo-menu {
-    font-size: 16px;
-  }
-
-  header ul li {
-    margin: 10px 10px;
-  }
-
-  header ul li a {
-    font-size: 14px;
-  }
-
-  .btn {
-    padding: 4px 8px;
-    font-size: 14px;
-    margin-right: 6px;
-  }
-
-  .btn img {
-    width: 16px;
-    margin-right: 6px;
-  }
+  width: 25px;
+  margin-right: 10px;
 }
 
 /* Estilos para os cards */
@@ -129,7 +199,7 @@ header ul li a {
   position: relative;
   /* Define a posição como relativa */
   margin-bottom: 60px;
-  backdrop-filter: grayscale(0.1) brightness(0.7);
+  backdrop-filter: grayscale(0.1) brightness(0.65);
 }
 
 .card .image-box {
@@ -242,6 +312,10 @@ header ul li a {
   /* Define a cor do texto como cinza claro */
   transform: translateY(50%);
   /* Move o elemento verticalmente */
+}
+
+.content a {
+  text-decoration: none;
 }
 
 .card .content img {
@@ -627,31 +701,6 @@ img {
 .btn-midia-social:hover img {
   transform: scale(1.15);
   /* Aplica uma escala de aumento no hover */
-}
-
-.btn-midia-social:hover:nth-child(1) {
-  background-color: var(--x);
-  /* Define a cor de fundo */
-}
-
-.btn-midia-social:hover:nth-child(2) {
-  background-color: var(--x);
-  /* Define a cor de fundo */
-}
-
-.btn-midia-social:hover:nth-child(3) {
-  background-color: var(--x);
-  /* Define a cor de fundo */
-}
-
-/* Media query para telas menores */
-@media (max-width: 880px) {
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right {
-    /* Adicione estilos aqui para telas menores */
-  }
 }
 
 .btn-midia-social:hover:nth-child(1) {
