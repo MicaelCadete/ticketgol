@@ -1,28 +1,48 @@
+/* Estilos para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Cor de fundo alternativa caso a imagem não carregue */
-    background-image: url('img-fundoTeste6.jpeg');  /*Caminho para a imagem de fundo */
-    background-size: cover; /* Ajusta a imagem para cobrir toda a área do body */
-    background-position: left; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background: url(/teste/img/img-fundoTeste6.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position: left;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita que a imagem se repita */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Altura total da viewport */
+    height: 100vh;
+    /* Altura total da viewport */
 }
+
 .checkout-container {
+    color: white;
     width: 80%;
-    max-width: 600px; /* Limita a largura máxima para telas maiores */
-    background-color: whitesmoke;
+    max-width: 600px;
+    background: transparent;
+    backdrop-filter: blur(3px) grayscale(0.2) brightness(0.4);
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgb(255, 0, 0);
+    border: 3px solid #b5121a;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 1px rgb(168, 3, 3);
 }
 
 h1 {
     text-align: center;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.store-info .horario {
     margin-bottom: 20px;
 }
 
@@ -30,37 +50,82 @@ h1 {
     margin-bottom: 20px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
+input,
+textarea {
+    width: 100%;
+    padding: 7px 0 8px 30px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    box-shadow: 0 0 12px 0 #B5121B;
+    color: white;
+    border: 2px solid #b5121a;
+    outline: none;
 }
 
-input, textarea, select {
+select {
     width: 100%;
-    padding: 6px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 7px 0 8px 5px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 12px 0 #B5121B;
+    color: white;
+    border: 2px solid #b5121a;
+    outline: none;
+    background: transparent;
+    margin-bottom: 8px;
+}
+
+option {
+    background-color: black;
+    color: white;
+}
+
+i {
+    position: absolute;
+    left: 0;
+    padding: 9px 30px;
 }
 
 /* Padronizando o campo de endereço de entrega */
 textarea {
-    resize: none; /* Impede o redimensionamento do textarea */
-    height: 20px; /* Aumenta a altura para facilitar a entrada de endereços */
+    resize: none;
+    /* Impede o redimensionamento do textarea */
+    height: 20px;
+    /* Aumenta a altura para facilitar a entrada de endereços */
+}
+
+#qr-code-container img {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 30%;
+    margin-left: 34.5%;
 }
 
 button {
     display: block;
-    width: 100%;
+    width: 50%;
     padding: 10px;
-    background-color: #007bff;
+    background: linear-gradient(to right, #b5121a, #b5121ab0);
     color: #fff;
-    border: none;
-    border-radius: 5px;
+    border: 2px solid #b5121a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #B5121B;
     cursor: pointer;
+    font-size: 20px;
+    margin-left: 25%;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    transform: scale(0.95);
+    transition: all 0.3s;
+}
+
+#btn-pagamento {
+    display: none;
+    /* Oculta o botão inicialmente */
 }
 
 /* Estilos para a div de informações da loja */
@@ -72,7 +137,8 @@ button:hover {
 }
 
 .store-info img {
-    width: 100px; /* Ajuste o tamanho conforme necessário */
+    width: 100px;
+    /* Ajuste o tamanho conforme necessário */
     height: auto;
     margin-bottom: 10px;
 }
@@ -100,7 +166,12 @@ button:hover {
 .logo-container {
     display: flex;
     justify-content: center;
+    margin-top: 15px;
     margin-bottom: 10px;
+}
+
+.logo-container img {
+    width: 90px;
 }
 
 .logo {

@@ -61,7 +61,7 @@
               </c:if>
               <div class="card">
                 <div class="image-box">
-                  <img src="Jogos/img/img-fundoBrasileirao.jpg" alt="">
+                  <img src="Jogos/img/img-logoBrasileirao.png" alt="">
                 </div>
                 <!-- Conteúdo do card -->
                 <div class="content">

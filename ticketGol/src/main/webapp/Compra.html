@@ -3,46 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
-    <link rel="stylesheet" href="compras.css">
+    <title>TicketGol - Compra</title>
+    <link rel="icon" type="image/x-icon" href="Jogos/img/img-icone2.png" />
+
+    <link rel="stylesheet" href="Compra/css/Compra.css">
+    <script src="Compra/js/Compra.js"></script>
+    
+    <link rel='stylesheet'href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 
 </head>
 <body>
     <div class="checkout-container">
-        <h1>Checkout</h1>
             <div class="store-info">
                 <div class="logo-container">
-                    <div class="logo">
-                        <img src="sp.png" alt="Logo da Loja 1">
-                    </div>
-                    <div class="logo">
-                        <img src="sp.png" alt="Logo da Loja 2">
-                    </div>
+                        <img src="Jogos/img/img-icone3.png" alt="">
                 </div>
-                <p>Estadio Morumbi</p>
-                <p>9h às 18h</p>
+                <h1>Finalizar Compra</h1>
+                <p>Estadio: Morumbi</p>
+                <p class="horario">Horário: 9h às 18h</p>
             </div>
         <form id="checkout-form">
-            <div class="form-group">
-                <label for="customer-name">Nome do Cliente:</label>
-                <input type="text" id="customer-name" name="customer-name" required placeholder="Nome:">
+            <!--<div class="form-group">
+                <input type="text" id="customer-name" name="customer-name" required placeholder="Nome">
+                <i class="fi fi-rr-user iUser" style="color: #ffffff;"></i>
             </div>
             <div class="form-group">
-                <label for="customer-email">E-mail:</label>
-                <input type="email" id="customer-email" name="customer-email" required placeholder="Email:">
-            </div>
+                <input type="email" id="customer-email" name="customer-email" required placeholder="Email">
+                <i class="fi fi-rr-envelope iEmail" style="color: #ffffff;"></i>
+            </div>-->
             <div class="form-group">
-                <label for="payment-method">Método de Pagamento:</label>
                 <select id="payment-method" name="payment-method" required>
-                    <option value="">Selecione um método</option>
+                    <option value="">Selecione um Método de Pagamento</option>
                     <option value="bank-transfer">Pix</option>
                 </select>
             </div>
-            <div id="qr-code-container" style="display: none;">
-                <img src="qrcode.png" alt="QR Code Pix">
+            <div id="qr-code-container" style="display: none;" class="img-qrCode">
+                <img src="Compra/img/qrcode.png" alt="QR Code Pix">
             </div>
+
+            <button id="btn-pagamento">Confirmar Compra</button>
         </form>
     </div>
-    <script src="compras.js"></script>
 </body>
 </html>
