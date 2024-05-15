@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="Jogos/css/JogosCadastro.css">
     <script src="Jogos/js/JogosCadastro.js"></script>
 
-    <link rel='stylesheet'href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 
         <form action="/create-evento" method="post">
 
-            <div class="field">
+            <div class="field" id="jogoForm">
                 <label>Nome do Evento:</label>
                 <input type="text" name="nomeEvento" id="nomeEvento" required placeholder="Digite o Nome">
 
@@ -36,7 +36,8 @@
                 <input type="text" name="horario" id="horario" required placeholder="Digite o horário">
 
                 <label>Quantidade Disponível:</label>
-                <input type="number" name="qtdDisponivel" id="qtdDisponivel" required placeholder="Digite a Quantidade Disponível">
+                <input type="number" name="qtdDisponivel" id="qtdDisponivel" required
+                    placeholder="Digite a Quantidade Disponível">
 
                 <button type="submit">Cadastrar</button>
 

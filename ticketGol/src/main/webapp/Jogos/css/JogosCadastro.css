@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
 
 * {
-
     font-family: 'Outfit', sans-serif;
-
 }
 
 body {
@@ -18,9 +16,8 @@ body {
 }
 
 .container {
-    width: 31%;
-    align-items: center;
-    justify-content: center;
+    width: 80%; /* Alterado para uma largura relativa */
+    max-width: 500px; /* Adicionado um valor máximo para garantir que o conteúdo não se espalhe demais */
     display: flex;
     flex-direction: column;
     border: 3px solid white;
@@ -28,22 +25,21 @@ body {
     box-shadow: 0px 0px 12px white;
     color: white;
     backdrop-filter: blur(3px) grayscale(0.1) brightness(0.4);
+    padding: 20px; /* Adicionado um preenchimento interno para espaçar os elementos do contêiner */
 }
 
 .field {
-    align-items: center;
-    justify-content: center;
     display: flex;
     flex-direction: column;
 }
 
 h1 {
-    margin-bottom: 50px;
+    margin-bottom: 20px; /* Reduzido o espaço entre o título e o formulário */
+    text-align: center;
 }
 
 label {
-    margin: 3px;
-    margin-top: 5px;
+    margin: 5px 0; /* Ajustado o espaçamento entre os rótulos */
     font-size: 17px;
 }
 
@@ -53,26 +49,38 @@ input {
     box-shadow: 0 0 8px 0 white;
     border: 2px solid white;
     border-radius: 20px;
-    margin: 12px;
-    width: 150%;
-    padding: 7%;
+    margin: 5px 0; /* Ajustado o espaçamento vertical dos inputs */
+    width: 95%; /* Alterado para uma largura relativa */
+    padding: 10px; /* Ajustado o preenchimento interno */
 }
 
 button {
-    background: transparent;
+    background: linear-gradient(to right, #d6d6d6, white);
     color: rgb(100, 100, 100);
     border: 2px solid white;
-    background: linear-gradient(to right, #d6d6d6, white);
     border-radius: 10px;
     box-shadow: 0 0 10px 0 white;
-    margin: 10px;
-    margin-top: 40px;
-    margin-bottom: 25px;
-    font-size: 25px;
+    margin: 10px 0; /* Ajustado o espaçamento vertical dos botões */
+    font-size: 20px; /* Reduzido o tamanho da fonte para que o botão caiba em telas menores */
+    padding: 10px 20px; /* Ajustado o preenchimento interno */
     cursor: pointer;
+    width: 35%;
+    align-self: center;
+    margin-top: 15px;
 }
 
 button:hover {
     transform: scale(0.98);
     transition: all 0.3s;
+}
+
+/* Media Query para telas menores */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%; /* Reduz a largura do contêiner em telas menores */
+    }
+
+    input, button {
+        font-size: 16px; /* Reduz o tamanho da fonte para elementos de entrada e botões em telas menores */
+    }
 }
