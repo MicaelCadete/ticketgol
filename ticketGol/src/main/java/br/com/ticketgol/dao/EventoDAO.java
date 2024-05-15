@@ -36,6 +36,31 @@ public class EventoDAO {
         }
 
     }
+
+    public Eventos buscarEventoPorId(int id) {
+        String SQL = "SELECT * FROM EVENTO WHERE idEvento = ?";
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                String nomeEvento = resultSet.getString("nomeevento");
+                String setor = resultSet.getString("setor");
+                String local = resultSet.getString("local");
+                String data = resultSet.getString("data");
+                String horario = resultSet.getString("horario");
+                int qtdDisponivel = resultSet.getInt("qtddisponivel");
+
+                return new Eventos(nomeEvento, local, setor, data, horario, qtdDisponivel, id);
+            }
+        } catch (SQLException e) {
+            System.out.println("Erro ao buscar evento por ID: " + e.getMessage());
+        }
+        return null;
+    }
+
     public List<Eventos> listarDadosEvento() {
 
         try {
@@ -75,6 +100,24 @@ public class EventoDAO {
 
         return Collections.emptyList();
 
+    }
+
+    public void comprarIngresso(int idEvento, int quantidade) {
+        String SQL = "UPDATE EVENTO SET qtdDisponivel = qtdDisponivel - ? WHERE idEvento = ?";
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setInt(1, quantidade);
+            preparedStatement.setInt(2, idEvento);
+            int rowsUpdated = preparedStatement.executeUpdate();
+            if (rowsUpdated > 0) {
+                System.out.println("Ingressos comprados com sucesso!");
+            } else {
+                System.out.println("Não foi possível comprar os ingressos.");
+            }
+        } catch (SQLException e) {
+            System.out.println("Erro ao comprar ingressos: " + e.getMessage());
+        }
     }
 
     public void deletarEvento(int id) {

@@ -46,7 +46,7 @@ public class CadastroEvento extends HttpServlet {
         EventoDAO eventodao = new EventoDAO();
         eventodao.cadastrarEvento(eventos);
 
-        request.getRequestDispatcher("JogosADM.jsp").forward(request, resp);
+        resp.sendRedirect("/lista-eventos2");
     }
 }
 

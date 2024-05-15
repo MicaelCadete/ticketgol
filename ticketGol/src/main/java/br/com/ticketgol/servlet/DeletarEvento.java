@@ -24,7 +24,7 @@ public class DeletarEvento extends HttpServlet {
         EventoDAO excluir = new EventoDAO();
 
         excluir.deletarEvento(idEvento);
-        response.sendRedirect(request.getContextPath() + "/JogosADM.jsp");
+        response.sendRedirect("/lista-eventos2");
 
     }
 }

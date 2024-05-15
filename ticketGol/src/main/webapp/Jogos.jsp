@@ -72,11 +72,11 @@
                     <p>Estádio: ${evento.local}</p>
                     <p>Ingressos Disponíveis: ${evento.qtdDisponivel}</p>
                     <!-- Botão de comprar -->
-                    <button class="btn-comprar">
-                      <a href="Compra.html" class="btn-comprar">
-                        <img src="Jogos/img/img-iconeCarrinho.png" alt="Entrar">Comprar
-                      </a>
-                    </button>
+                   <button class="btn-comprar">
+                           <a href="Compra.html?id=${evento.id}" class="btn-comprar">
+                               <img src="Jogos/img/img-iconeCarrinho.png" alt="Entrar">Comprar
+                           </a>
+                       </button>
                   </div>
                 </div>
                 <!-- Incrementar a contagem de cartões -->

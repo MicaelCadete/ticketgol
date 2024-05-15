@@ -22,15 +22,8 @@
                 <p>Estadio: Morumbi</p>
                 <p class="horario">Horário: 9h às 18h</p>
             </div>
-        <form id="checkout-form">
-            <!--<div class="form-group">
-                <input type="text" id="customer-name" name="customer-name" required placeholder="Nome">
-                <i class="fi fi-rr-user iUser" style="color: #ffffff;"></i>
-            </div>
-            <div class="form-group">
-                <input type="email" id="customer-email" name="customer-email" required placeholder="Email">
-                <i class="fi fi-rr-envelope iEmail" style="color: #ffffff;"></i>
-            </div>-->
+        <form id="checkout-form" action="/ComprarIngresso" method="POST">
+            <input type="hidden" id="id-evento" name="id-evento" value="">
             <div class="form-group">
                 <select id="payment-method" name="payment-method" required>
                     <option value="">Selecione um Método de Pagamento</option>
@@ -40,9 +33,19 @@
             <div id="qr-code-container" style="display: none;" class="img-qrCode">
                 <img src="Compra/img/qrcode.png" alt="QR Code Pix">
             </div>
-
             <button id="btn-pagamento">Confirmar Compra</button>
         </form>
+
     </div>
+    <script>
+        window.onload = function() {
+            // Captura o ID do evento da URL
+            const params = new URLSearchParams(window.location.search);
+            const idEvento = params.get('id');
+
+            // Adiciona o ID do evento ao campo hidden no formulário
+            document.getElementById('id-evento').value = idEvento;
+        }
+    </script>
 </body>
 </html>
