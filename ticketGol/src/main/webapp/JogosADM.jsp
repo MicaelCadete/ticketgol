@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
   <%@ page contentType="text/html; charset=UTF-8" %>
 
@@ -39,8 +40,8 @@
           <li><a href="JogosCadastro.html">Cadastrar Jogo</a></li>
         </ul>
         <!-- Botão de login -->
-        <button class="btn">
-          <a href="Login.html" class="btn">
+        <button class="btn" href="Login.html" class="btn">
+          <a href="Login.html">
             <img src="Home/img/img-iconeUser.png" alt="Entrar">Login
           </a>
         </button>
@@ -61,14 +62,14 @@
                 </c:if>
                 <div class="card">
                   <div class="image-box">
-                    <img src="Jogos/img/img-fundoBrasileirao.jpg" alt="">
+                    <img src="Jogos/img/img-logoBrasileirao.png" alt="">
                   </div>
                   <!-- Conteúdo do card -->
                   <div class="content">
                     <h1>Brasileirão</h1>
                     <h2>${evento.nomeEvento}</h2>
-                    <p>${evento.data}</p>
-                    <p>${evento.horario}</p>
+                    <p>Horário: ${evento.horario}</p>
+                    <p>Data: ${evento.data}</p>
                     <p>Estádio: ${evento.local}</p>
                     <p>Ingressos Disponíveis: ${evento.qtdDisponivel}</p>
                     <!-- Botão de comprar -->
@@ -86,5 +87,61 @@
             </div>
           </div>
       </section>
+
+      <!-- Seção de informações -->
+      <section id="informacoes">
+        <footer class="footer-distributed">
+          <!-- Informações da empresa -->
+          <div class="footer-left">
+            <h3>Ticket<span>Gol</span></h3>
+            <p class="footer-links">
+              <a href="Home.html">Início</a>
+              |
+              <a href="/lista-eventos">Jogos</a>
+              |
+              <a href="">Informações</a>
+            </p>
+            <p class="footer-company-name">Copyright © 2021 <strong>TicketGol</strong> All rights reserved</p>
+          </div>
+          <!-- Informações de contato -->
+          <div class="footer-center">
+            <!-- Informações de contato -->
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p><span><b>São Paulo, SP</b></span></p>
+            </div>
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+55 (11) 93354-8219</p>
+            </div>
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p><a href="mailto:sagar00001.co@gmail.com">contato.ticketgol@gmail.com</a></p>
+            </div>
+          </div>
+          <!-- Sobre a empresa e redes sociais -->
+          <div class="footer-right">
+            <p class="footer-company-about">
+              <span>Sobre Nós</span>
+              <strong>TicketGol - </strong>Somos a sua porta de entrada para a emoção e a paixão dos grandes jogos. Na
+              nossa
+              plataforma, você encontrará uma ampla seleção de ingressos para os jogos mais emocionantes do momento.
+            </p>
+            <!-- Botões das redes sociais -->
+            <div class="btns-midias-sociais">
+              <button class="btn-midia-social">
+                <img src="Home/img/img-iconeFace.png" class="img-icones">
+              </button>
+              <button class="btn-midia-social">
+                <img src="Home/img/img-iconeInsta.png" class="img-icones">
+              </button>
+              <button class="btn-midia-social">
+                <img src="Home/img/img-iconeX.png" class="img-icones">
+              </button>
+            </div>
+          </div>
+        </footer>
+      </section>
     </body>
+
 </html>

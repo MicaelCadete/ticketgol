@@ -1,144 +1,88 @@
-/* Definições gerais */
-/* Define configurações iniciais para todos os elementos */
+/* Estilos para todos os elementos */
 * {
   margin: 0;
-  /* Define a margem como 0 */
   padding: 0;
-  /* Define o preenchimento como 0 */
   box-sizing: border-box;
-  /* Define o modelo de caixa como border-box */
-  font-family: monospace;
-  /* Define a fonte como monoespaçada */
+  font-family: 'Roboto Mono', monospace;
 }
 
 html {
   scroll-behavior: smooth;
-  /* Adiciona um efeito de rolagem suave para a página */
+}
+
+body {
+  color: white;
+  background: url(/teste/img/img-fundoTeste6.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Estilos para o cabeçalho */
 header {
-  width: 100%;
-  /* Ajusta a largura para compensar o overflow horizontal */
-  margin-top: -12.5%;
-  /* Move o cabeçalho para cima para alinhar visualmente */
+  width: 100.2%;
   display: flex;
-  /* Usa um layout flexível para o cabeçalho */
   align-items: center;
-  /* Alinha os itens verticalmente */
   justify-content: space-between;
-  /* Distribui o espaço disponível entre os elementos */
-  padding: 10px 0;
-  /* Adiciona preenchimento superior e inferior */
+  padding: 10px 20px;
+  border: 3px solid white;
   position: absolute;
-  /* Define a posição como absoluta */
-  background-color: #b5121b;
-  /* Define a cor de fundo como vermelho */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  margin-top: -25px;
+  margin-left: -2.6px;
 }
 
-/* Estilos para o corpo da página */
-body {
-  color: white;
-  /* Define a cor do texto como branco */
-  background: url(/teste/img/img-fundoTeste6.jpeg) no-repeat;
-  /* Define a imagem de fundo */
-  background-size: cover;
-  /* Faz a imagem de fundo cobrir todo o elemento */
-  background-position: center;
-  /* Centraliza a imagem de fundo */
-}
-
-/* Estilos para a logo */
 .logo {
-  width: 205px;
-  /* Define a largura da logo */
+  width: 200px;
   cursor: pointer;
-  /* Define o cursor como ponteiro */
-  margin-left: 65%;
-  /* Move a logo para a direita */
+  margin-left: 8%;
 }
 
 .logo:hover {
   transform: scale(0.93);
-  /* Aplica uma escala de redução no hover */
   transition: all 0.5s;
-  /* Adiciona uma transição suave */
 }
 
-/* Estilos para o título do menu */
-.titulo-menu {
-  margin-left: 2px;
-  /* Define a margem à esquerda */
-  font-size: 25px;
-  /* Define o tamanho da fonte */
-  cursor: pointer;
-  /* Define o cursor como ponteiro */
-  font-weight: bolder;
-  /* Define a espessura da fonte como negrito */
-}
-
-.titulo-menu:hover {
-  transform: scale(1.05);
-  /* Aplica uma escala de aumento no hover */
-  transition: all 0.5s;
-  /* Adiciona uma transição suave */
-}
-
-/* Estilos para a lista de links no cabeçalho */
 header ul {
   list-style: none;
-  /* Remove os estilos padrão da lista */
-  width: 100%;
-  /* Define a largura como 100% */
-  text-align: right;
-  /* Alinha o texto à direita */
-  margin-right: 19%;
-  /* Adiciona uma margem à direita */
+  display: flex;
+  gap: 130px;
 }
 
 header ul li {
   display: inline-block;
-  /* Exibe os itens da lista em linha */
-  margin: 10px 35px;
-  /* Adiciona margens aos itens da lista */
 }
 
 header ul li a {
   font-size: 19px;
-  /* Define o tamanho da fonte */
   color: white;
-  /* Define a cor do texto como branco */
   text-decoration: none;
-  /* Remove a decoração do texto */
-  font-weight: bolder;
-  /* Define a espessura da fonte como negrito */
+  font-weight: bold;
 }
 
 header ul li:hover {
   transform: scale(0.93);
-  /* Aplica uma escala de redução no hover */
   transition: all 0.5s;
-  /* Adiciona uma transição suave */
 }
 
-/* Estilos para o botão */
+
+/* Estilos para o botão de login */
 .btn {
   display: flex;
   align-items: center;
-  padding: 5px 8px;
-  border-color: white;
-  outline: 0;
+  padding: 5px 15px;
+  border: 2px solid white;
   border-radius: 15px;
   background: none;
   color: white;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 550;
   cursor: pointer;
-  margin-right: 5%;
+  margin-right: 1%;
 }
 
 .btn:hover {
-  /* Efeito de escala no hover */
   transform: scale(0.95);
   transition: all 0.4s;
 }
@@ -146,15 +90,77 @@ header ul li:hover {
 .btn a {
   text-decoration: none;
   color: white;
-}
-
-.btn a:hover {
-  transform: none;
+  display: flex;
+  align-items: center;
 }
 
 .btn img {
   width: 25px;
-  margin-right: 10px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .logo {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+
+  header ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  header ul li {
+    display: block;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .logo {
+    width: 130px;
+    margin-bottom: 10px;
+  }
+
+  header ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  header ul li {
+    display: block;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
 }
 
 /* Estilos para os cards */
@@ -188,7 +194,7 @@ header ul li:hover {
 
 .card {
   background: transparent;
-  width: 280px;
+  width: 294px;
   /* Define a largura do card */
   height: 380px;
   /* Define a altura do card */
@@ -199,7 +205,7 @@ header ul li:hover {
   position: relative;
   /* Define a posição como relativa */
   margin-bottom: 60px;
-  backdrop-filter: grayscale(0.1) brightness(0.65);
+  backdrop-filter: grayscale(0.1) brightness(0.5);
 }
 
 .card .image-box {
@@ -223,7 +229,7 @@ header ul li:hover {
   border-radius: 50%;
   /* Adiciona bordas arredondadas */
   margin-left: 42.5%;
-  margin-top: 24%;
+  margin-top: 12%;
 
 }
 
@@ -268,28 +274,10 @@ header ul li:hover {
 }
 
 .content h1 {
-  font-size: 22px;
+  font-size: 25px;
   /* Define o tamanho da fonte */
-  margin-top: -40px;
+  margin-top: -60px;
   /* Move o texto para cima */
-}
-
-.content .img2 {
-  width: 100px;
-  /* Define a largura da imagem */
-  margin-left: 105px;
-  /* Adiciona uma margem à esquerda */
-  margin-top: -35px;
-  /* Move a imagem para cima */
-}
-
-.content .img3 {
-  width: 80px;
-  /* Define a largura da imagem */
-  margin-left: 115px;
-  /* Adiciona uma margem à esquerda */
-  margin-top: -35px;
-  /* Move a imagem para cima */
 }
 
 .content h2 {
@@ -299,12 +287,13 @@ header ul li:hover {
   /* Define a escala como 0.7 */
   font-size: 17px;
   /* Define o tamanho da fonte */
-  margin-top: 30px;
+  margin-top: 20px;
   /* Adiciona uma margem superior */
+  margin-bottom: 20px;
 }
 
 .content p {
-  font-size: 14px;
+  font-size: 13px;
   /* Define o tamanho da fonte */
   line-height: 1.5;
   /* Define a altura da linha */
@@ -660,62 +649,46 @@ footer {
 
 .btn-midia-social {
   width: 3rem;
-  /* Define a largura */
   height: 3rem;
-  /* Define a altura */
   border: none;
-  /* Remove a borda */
   background-color: transparent;
-  /* Define o plano de fundo como transparente */
   border-radius: 50%;
-  /* Adiciona bordas arredondadas */
   outline: 2px solid white;
-  /* Adiciona um contorno branco */
   cursor: pointer;
-  /* Define o cursor como ponteiro */
   transition: all 0.3s;
-  /* Adiciona uma transição suave */
   display: grid;
-  /* Usa um layout de grade */
   place-items: center;
-  /* Alinha os itens no centro */
 }
 
 .btn-midia-social:hover {
   outline-offset: 3px;
-  /* Define o deslocamento do contorno */
   transition: all 0.3s;
-  /* Adiciona uma transição suave */
 }
 
-img {
+.img-icones {
   width: 15px;
-  /* Define a largura da imagem */
 }
 
 .btn-midia-social img {
   transition: all 0.2s;
-  /* Adiciona uma transição suave */
 }
 
 .btn-midia-social:hover img {
   transform: scale(1.15);
-  /* Aplica uma escala de aumento no hover */
 }
 
 .btn-midia-social:hover:nth-child(1) {
-  background-color: var(--x);
-  /* Define a cor de fundo */
+  background-color: var(--facebook);
 }
 
 .btn-midia-social:hover:nth-child(2) {
-  background-color: var(--x);
-  /* Define a cor de fundo */
+  background: radial-gradient(circle at 30% 107%, #FDF497 0%,
+      #FDF497 5%, #FD5949 45%,
+      #D6249F 60%, #285AEB 90%);
 }
 
 .btn-midia-social:hover:nth-child(3) {
   background-color: var(--x);
-  /* Define a cor de fundo */
 }
 
 /* Media query para telas menores */
