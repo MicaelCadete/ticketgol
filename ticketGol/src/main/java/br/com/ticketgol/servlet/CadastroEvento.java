@@ -36,9 +36,9 @@ public class CadastroEvento extends HttpServlet {
             return;
         }
         Eventos eventos= new Eventos();
-        eventos.setNomeEvento(nomeEvento);
         eventos.setSetor(setor);
         eventos.setLocal(local);
+        eventos.setNomeEvento(nomeEvento);
         eventos.setData(data);
         eventos.setHorario(horario);
         eventos.setQtdDisponivel(qtdDisponivel);
