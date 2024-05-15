@@ -5,8 +5,17 @@ public class Eventos {
     private String local;
     private String setor;
     private String data;
+    private String horario;
     private int qtdDisponivel;
     private int id;
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
 
     public int getId() {
         return id;
@@ -60,13 +69,14 @@ public class Eventos {
         this.qtdDisponivel = qtdDisponivel;
     }
 
-    public Eventos(String nomeEvento, String local, String setor, String data, int qtdDisponivel, int idevento) {
+    public Eventos(String nomeEvento, String local, String setor, String data, String horario, int qtdDisponivel, int id) {
         this.nomeEvento = nomeEvento;
         this.local = local;
         this.setor = setor;
         this.data = data;
+        this.horario = horario;
         this.qtdDisponivel = qtdDisponivel;
-        this.id = idevento;
+        this.id = id;
     }
 }
 

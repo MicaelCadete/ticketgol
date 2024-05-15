@@ -35,7 +35,6 @@
         </a>
         <ul>
           <!-- Links de navegação -->
-          <li><a data-scroll="inicio" href="HomeADM.html">Início</a></li>
           <li><a href="/lista-eventos2">Jogos</a></li>
           <li><a href="JogosCadastro.html">Cadastrar Jogo</a></li>
         </ul>
@@ -69,7 +68,9 @@
                     <h1>Brasileirão</h1>
                     <h2>${evento.nomeEvento}</h2>
                     <p>${evento.data}</p>
+                    <p>${evento.horario}</p>
                     <p>Estádio: ${evento.local}</p>
+                    <p>Ingressos Disponíveis: ${evento.qtdDisponivel}</p>
                     <!-- Botão de comprar -->
                     <button class="btn-deletar">
                       <a href="/deletar?id=${evento.id}" class="btn-deletar">Deletar</a>
@@ -85,64 +86,5 @@
             </div>
           </div>
       </section>
-
-      <!-- Seção de informações -->
-      <section id="informacoes">
-        <footer class="footer-distributed">
-          <!-- Informações da empresa -->
-          <div class="footer-left">
-            <h3>Ticket<span>Gol</span></h3>
-            <p class="footer-links">
-              <a href="Home.html">Início</a>
-              |
-              <a href="Jogos.html">Eventos</a>
-              |
-              <a href="">Informações</a>
-            </p>
-            <p class="footer-company-name">Copyright © 2021 <strong>TicketGol</strong> All rights reserved</p>
-          </div>
-          <!-- Informações de contato -->
-          <div class="footer-center">
-            <!-- Informações de contato -->
-            <div>
-              <i class="fa fa-map-marker"></i>
-              <p><span><b>São Paulo, SP</b></span></p>
-            </div>
-            <div>
-              <i class="fa fa-phone"></i>
-              <p>+55 (11) 93354-8219</p>
-            </div>
-            <div>
-              <i class="fa fa-envelope"></i>
-              <p><a href="mailto:sagar00001.co@gmail.com">contato.ticketgol@gmail.com</a></p>
-            </div>
-          </div>
-          <!-- Sobre a empresa e redes sociais -->
-          <div class="footer-right">
-            <p class="footer-company-about">
-              <span>Sobre Nós</span>
-              <strong>TicketGol - </strong>Somos a sua porta de entrada para a emoção e a paixão dos grandes jogos. Na
-              nossa
-              plataforma, você encontrará uma ampla seleção de ingressos para os jogos mais emocionantes do momento.
-            </p>
-            <!-- Botões das redes sociais -->
-            <div class="btns-midias-sociais">
-              <button class="btn-midia-social">
-                <img src="Home/img/img-iconeFace.png" class="img-icones">
-              </button>
-              <button class="btn-midia-social">
-                <img src="Home/img/img-iconeInsta.png" class="img-icones">
-              </button>
-              <button class="btn-midia-social">
-                <img src="Home/img/img-iconeX.png" class="img-icones">
-              </button>
-            </div>
-          </div>
-        </footer>
-      </section>
     </body>
-
-</html>
-
-
 </html>

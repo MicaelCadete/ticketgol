@@ -17,33 +17,30 @@ public class CadastroEvento extends HttpServlet {
         String setor = request.getParameter("setor");
         String local = request.getParameter("local");
         String data = request.getParameter("data");
+        String horario = request.getParameter("horario");
         String qtdDisponivelStr = request.getParameter("qtdDisponivel");
 
-        // Verifica se algum campo está vazio
-        if (nomeEvento.isEmpty() || setor.isEmpty() || local.isEmpty() || data.isEmpty() || qtdDisponivelStr.isEmpty()) {
-            // Se algum campo estiver vazio, redireciona de volta ao formulário exibindo uma mensagem de erro
+        if (nomeEvento.isEmpty() || horario.isEmpty() || setor.isEmpty() || local.isEmpty() || data.isEmpty() || qtdDisponivelStr.isEmpty()) {
             System.out.println("Todos os campos devem ser preenchidos");
             request.getRequestDispatcher("CadastroJogos.html").forward(request, resp);
-            return; // Interrompe o fluxo para evitar processamento adicional
+            return;
         }
 
-        // Verifica se qtdDisponivel é um número válido
         int qtdDisponivel;
         try {
             qtdDisponivel = Integer.parseInt(qtdDisponivelStr);
         } catch (NumberFormatException e) {
-            // Se qtdDisponivel não for um número válido, exibe uma mensagem de erro
+
             System.out.println("Quantidade disponível deve ser um número inteiro");
             request.getRequestDispatcher("CadastroJogos.html").forward(request, resp);
-            return; // Interrompe o fluxo para evitar processamento adicional
+            return;
         }
-
-        // Se todos os campos estiverem preenchidos e qtdDisponivel for um número válido, continua com o processamento
         Eventos eventos= new Eventos();
         eventos.setNomeEvento(nomeEvento);
         eventos.setSetor(setor);
         eventos.setLocal(local);
         eventos.setData(data);
+        eventos.setHorario(horario);
         eventos.setQtdDisponivel(qtdDisponivel);
 
         EventoDAO eventodao = new EventoDAO();

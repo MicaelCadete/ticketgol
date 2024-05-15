@@ -22,7 +22,7 @@ import java.util.List;
 
         if ("adm".equals(email) && "adm".equals(senha)) {
             System.out.println("Administrador logado!");
-            request.getRequestDispatcher("HomeADM.html").forward(request, resp);
+            request.getRequestDispatcher("JogosADM.jsp").forward(request, resp);
         } else if (verificar.autenticar(email, senha)) {
             System.out.println("Usuário autenticado com sucesso!");
             request.getRequestDispatcher("Home.html").forward(request, resp);

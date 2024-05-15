@@ -11,7 +11,7 @@ import java.util.List;
 public class EventoDAO {
     public void cadastrarEvento(Eventos evento) {
 
-        String SQL = "INSERT INTO EVENTO (nomeEvento , setor, local , data, qtdDisponivel ) VALUES (?,?,?,?,?)";
+        String SQL = "INSERT INTO EVENTO (nomeEvento , setor, local , data, qtdDisponivel, horario ) VALUES (?,?,?,?,?,?)";
         try {
 
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -23,6 +23,7 @@ public class EventoDAO {
             preparedStatement.setString(3, evento.getLocal());
             preparedStatement.setString(4, evento.getData());
             preparedStatement.setInt(5, evento.getQtdDisponivel());
+            preparedStatement.setString(6, evento.getHorario());
 
             preparedStatement.execute();
 
@@ -56,15 +57,13 @@ public class EventoDAO {
                 String setor = resultSet.getString("setor");
                 String local = resultSet.getString("local");
                 String data = resultSet.getString("data");
+                String horario = resultSet.getString("horario");
                 int qtdDisponivel = resultSet.getInt("qtddisponivel");
 
-                Eventos dados = new Eventos (nomeEvento, local, setor, data, qtdDisponivel,id);
+                Eventos dados = new Eventos (nomeEvento, local, setor, data,horario,qtdDisponivel,id);
                 dadosEvento.add(dados);
-
             }
-
             System.out.println("Sucesso ao resgatar dados dos eventos no DB!");
-
 
             return dadosEvento;
 

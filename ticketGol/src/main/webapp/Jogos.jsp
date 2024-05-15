@@ -14,7 +14,7 @@
 
     <!-- Configurações de visualização e estilos -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="Jogos/css/Jogos.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="Jogos/css/JogosADM.css" />
 
     <!-- Fontes e ícones -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,7 +68,9 @@
                   <h1>Brasileirão</h1>
                   <h2>${evento.nomeEvento}</h2>
                   <p>${evento.data}</p>
+                  <p>${evento.horario}</p>
                   <p>Estádio: ${evento.local}</p>
+                   <p>Ingressos Disponíveis: ${evento.qtdDisponivel}</p>
                   <!-- Botão de comprar -->
                   <button class="btn-comprar">
                     <a href="Compra.html" class="btn-comprar">
