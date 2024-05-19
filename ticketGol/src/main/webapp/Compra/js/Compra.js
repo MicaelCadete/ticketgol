@@ -13,10 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (this.value === 'bank-transfer') {
             qrCodeContainer.style.display = 'block';
             confirmButton.style.display = 'block'; // Exibe o botão de confirmação
+
         } else {
             qrCodeContainer.style.display = 'none';
             confirmButton.style.display = 'none'; // Oculta o botão de confirmação
         }
+    });
+
+    confirmButton.addEventListener('click', function() {
+        window.location.href = 'https://mpago.la/2Lwr2oD';
     });
 });
 
