@@ -19,6 +19,7 @@ public class CadastroEvento extends HttpServlet {
         String data = request.getParameter("data");
         String horario = request.getParameter("horario");
         String qtdDisponivelStr = request.getParameter("qtdDisponivel");
+        String valor = request.getParameter("valor");
 
         if (nomeEvento.isEmpty() || horario.isEmpty() || setor.isEmpty() || local.isEmpty() || data.isEmpty() || qtdDisponivelStr.isEmpty()) {
             System.out.println("Todos os campos devem ser preenchidos");
@@ -42,6 +43,7 @@ public class CadastroEvento extends HttpServlet {
         eventos.setData(data);
         eventos.setHorario(horario);
         eventos.setQtdDisponivel(qtdDisponivel);
+        eventos.setValor(valor);
 
         EventoDAO eventodao = new EventoDAO();
         eventodao.cadastrarEvento(eventos);

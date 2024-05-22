@@ -19,8 +19,6 @@
                         <img src="Jogos/img/img-icone3.png" alt="">
                 </div>
                 <h1>Finalizar Compra</h1>
-                <p>Estadio: Morumbi</p>
-                <p class="horario">Horário: 9h às 18h</p>
             </div>
         <form id="checkout-form" action="/ComprarIngresso" method="POST">
             <input type="hidden" id="id-evento" name="id-evento" value="">
@@ -39,11 +37,8 @@
     </div>
     <script>
         window.onload = function() {
-            // Captura o ID do evento da URL
             const params = new URLSearchParams(window.location.search);
             const idEvento = params.get('id');
-
-            // Adiciona o ID do evento ao campo hidden no formulário
             document.getElementById('id-evento').value = idEvento;
         }
     </script>

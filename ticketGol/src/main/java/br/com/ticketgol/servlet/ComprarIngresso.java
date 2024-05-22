@@ -12,14 +12,11 @@ import java.io.IOException;
 @WebServlet("/ComprarIngresso")
 public class ComprarIngresso extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Obtém o ID do evento da solicitação
         int idEvento = Integer.parseInt(request.getParameter("id-evento"));
         System.out.println(idEvento);
-        // Atualiza a quantidade de ingressos disponíveis no banco de dados
         EventoDAO eventoDAO = new EventoDAO();
-        eventoDAO.comprarIngresso(idEvento, 1); // Considerando que o usuário comprou apenas 1 ingresso
+        eventoDAO.comprarIngresso(idEvento, 1);
 
-        // Redireciona para uma página de confirmação de compra
         response.sendRedirect("/lista-eventos");
     }
 }

@@ -71,6 +71,7 @@
                     <p>Horário: ${evento.horario}</p>
                     <p>Data: ${evento.data}</p>
                     <p>Estádio: ${evento.local}</p>
+                    <p>Valor: ${evento.valor}</p>
                     <p>Ingressos Disponíveis: ${evento.qtdDisponivel}</p>
                     <!-- Botão de comprar -->
                     <button class="btn-deletar">

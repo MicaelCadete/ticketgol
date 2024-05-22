@@ -11,7 +11,7 @@ import java.util.List;
 public class EventoDAO {
     public void cadastrarEvento(Eventos evento) {
 
-        String SQL = "INSERT INTO EVENTO (nomeEvento , setor, local , data, qtdDisponivel, horario ) VALUES (?,?,?,?,?,?)";
+        String SQL = "INSERT INTO EVENTO (nomeEvento , setor, local , data, qtdDisponivel, horario, valor ) VALUES (?,?,?,?,?,?,?)";
         try {
 
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -24,6 +24,7 @@ public class EventoDAO {
             preparedStatement.setString(4, evento.getData());
             preparedStatement.setInt(5, evento.getQtdDisponivel());
             preparedStatement.setString(6, evento.getHorario());
+            preparedStatement.setString(7, evento.getValor());
 
             preparedStatement.execute();
 
@@ -52,8 +53,9 @@ public class EventoDAO {
                 String data = resultSet.getString("data");
                 String horario = resultSet.getString("horario");
                 int qtdDisponivel = resultSet.getInt("qtddisponivel");
+                String valor = resultSet.getString("valor");
 
-                return new Eventos(nomeEvento, local, setor, data, horario, qtdDisponivel, id);
+                return new Eventos(local, nomeEvento, setor, data, valor, qtdDisponivel,horario, id);
             }
         } catch (SQLException e) {
             System.out.println("Erro ao buscar evento por ID: " + e.getMessage());
@@ -84,8 +86,9 @@ public class EventoDAO {
                 String data = resultSet.getString("data");
                 String horario = resultSet.getString("horario");
                 int qtdDisponivel = resultSet.getInt("qtddisponivel");
+                String valor = resultSet.getString("valor");
 
-                Eventos dados = new Eventos (nomeEvento, local, setor, data,horario,qtdDisponivel,id);
+                Eventos dados = new Eventos (local, nomeEvento, setor, data, valor, qtdDisponivel,horario, id);
                 dadosEvento.add(dados);
             }
             System.out.println("Sucesso ao resgatar dados dos eventos no DB!");
